@@ -1,0 +1,1169 @@
+{
+    "members": [
+      {
+        "name": "current_object",
+        "namespace": "None",
+        "type": "property",
+        "description": "The current object in a for each object or for each object with label loop."
+      },
+      {
+        "name": "current_player",
+        "namespace": "None",
+        "type": "property",
+        "description": "The current player in a for each player or for each player randomly loop."
+      },
+      {
+        "name": "current_team",
+        "namespace": "None",
+        "type": "property",
+        "description": "The current team in a for each team loop."
+      },
+      {
+        "name": "death_event_damage_type",
+        "namespace": "None",
+        "type": "property",
+        "description": "During an object death event, this is the damage type that killed the object. It is presumed to be a damage reporting type; testing is pending."
+      },
+      {
+        "name": "hud_target_object",
+        "namespace": "None",
+        "type": "property",
+        "description": "This value can be used with object waypoint text to display values related to the object that has the waypoint."
+      },
+      {
+        "name": "hud_target_player",
+        "namespace": "None",
+        "type": "property",
+        "description": "This value's precise meaning is unknown, but it can presumably be used with HUD widgets and object waypoints to display different information for each player."
+      },
+      {
+        "name": "killed_object",
+        "namespace": "None",
+        "type": "property",
+        "description": "During an object death event, this is the killed object."
+      },
+      {
+        "name": "killer_object",
+        "namespace": "None",
+        "type": "property",
+        "description": "During an object death event, this is the killer object."
+      },
+      {
+        "name": "killer_player",
+        "namespace": "None",
+        "type": "property",
+        "description": "During an object death event, this is the killer player."
+      },
+      {
+        "name": "local_player",
+        "namespace": "None",
+        "type": "property",
+        "description": "This value can be used with HUD widgets and object waypoints to display different information for each player. It refers to the player that the widget or waypoint is being shown to."
+      },
+      {
+        "name": "local_team",
+        "namespace": "None",
+        "type": "property",
+        "description": "This is the team to which the local player belongs. This value can be passed to HUD widgets as part of a format string to display information about the team."
+      },
+      {
+        "name": "neutral_team",
+        "namespace": "None",
+        "type": "property",
+        "description": "A value that can be used to refer to Neutral Team."
+      },
+      {
+        "name": "no_object",
+        "namespace": "None",
+        "type": "property",
+        "description": "A value which represents \"none,\" usable where an object variable can appear."
+      },
+      {
+        "name": "no_player",
+        "namespace": "None",
+        "type": "property",
+        "description": "A value which represents \"none,\" usable where a player variable can appear."
+      },
+      {
+        "name": "no_team",
+        "namespace": "None",
+        "type": "property",
+        "description": "A value which represents \"none,\" usable where a team variable can appear. It is not the same as neutral_team."
+      },
+      {
+        "name": "no_widget",
+        "namespace": "None",
+        "type": "property",
+        "description": "A value which represents \"none,\" usable where a HUD widget can appear."
+      },
+      {
+        "name": "player[n]",
+        "namespace": "None",
+        "type": "property",
+        "description": "Allows direct access to all sixteen possible active players in a match."
+      },
+      {
+        "name": "script_option[n]",
+        "namespace": "None",
+        "type": "property",
+        "description": "Allows scripts to access the value of scripted Custom Game options."
+      },
+      {
+        "name": "script_traits[n]",
+        "namespace": "None",
+        "type": "property",
+        "description": "One of the sixteen sets of player traits available to scripts."
+      },
+      {
+        "name": "script_widget[n]",
+        "namespace": "None",
+        "type": "property",
+        "description": "One of the four HUD widgets available to scripts."
+      },
+      {
+        "name": "target_team",
+        "namespace": "None",
+        "type": "property",
+        "description": "If there is a hud_target_player, then this is the team that that player is on. Otherwise, it's the team of the target object. This value can be passed to HUD widgets as part of a format string to display information about the team."
+      },
+      {
+        "name": "team[n]",
+        "namespace": "None",
+        "type": "property",
+        "description": "Allows direct access to all eight possible teams in a match."
+      },
+      {
+        "name": "debug_break",
+        "alias": "break_into_debugger",
+        "namespace": "None",
+        "type": "action",
+        "description": "A non-functional debugging tool. In Halo: Reach's debug builds, this probably broke into a debugger."
+      },
+      {
+        "name": "debug_force_player_view_count",
+        "namespace": "None",
+        "type": "action",
+        "description": "A non-functional debugging tool."
+      },
+      {
+        "name": "debug_print",
+        "namespace": "None",
+        "type": "action",
+        "description": "A non-functional debugging tool. In Halo: Reach's debug builds, this probably writes a message to some log file."
+      },
+      {
+        "name": "debug_set_tracing_enabled",
+        "alias": "debugging_enable_tracing",
+        "namespace": "None",
+        "type": "action",
+        "description": "A non-functional debugging tool. In Halo: Reach's debug builds, this probably set whether tracing was enabled."
+      },
+      {
+        "name": "get_random_object",
+        "namespace": "None",
+        "type": "action",
+        "description": "Get a random object on the map with the specified Forge label."
+      },
+      {
+        "name": "insert_theater_film_marker",
+        "alias": "saved_film_insert_marker",
+        "namespace": "None",
+        "type": "action",
+        "description": "Unknown."
+      },
+      {
+        "name": "rand",
+        "namespace": "None",
+        "type": "action",
+        "description": "Generates a random number."
+      },
+      {
+        "name": "send_incident",
+        "namespace": "None",
+        "type": "action",
+        "description": "Send an incident."
+      },
+      {
+        "name": "send_incident_with_integer",
+        "namespace": "None",
+        "type": "action",
+        "description": "Send an incident."
+      },
+      {
+        "name": "set_scenario_interpolator_state",
+        "namespace": "None",
+        "type": "action",
+        "description": "Set the state value for a map-defined \"scenario interpolator.\""
+      },
+
+      
+
+      {
+        "name": "betrayal_booting",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether Betrayal Booting is enabled."
+      },
+      {
+        "name": "betrayal_penalty",
+        "namespace": "game",
+        "type": "property",
+        "description": "The betrayal penalty time for respawning players, in seconds."
+      },
+      {
+        "name": "current_round",
+        "namespace": "game",
+        "type": "property",
+        "description": "The current round number."
+      },
+      {
+        "name": "dead_players_can_talk",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether dead players can talk."
+      },
+      {
+        "name": "dont_team_restrict_chat",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether chat is team-restricted."
+      },
+      {
+        "name": "fireteams_enabled",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether fireteams are enabled."
+      },
+      {
+        "name": "friendly_fire",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether Friendly Fire is enabled."
+      },
+      {
+        "name": "grace_period_time",
+        "namespace": "game",
+        "type": "property",
+        "description": "The amount of Grace Period time."
+      },
+      {
+        "name": "grace_period_timer",
+        "namespace": "game",
+        "type": "property",
+        "description": "The current round's remaining Grace Period time."
+      },
+      {
+        "name": "grenades_enabled",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether Grenades on Map is enabled or not."
+      },
+      {
+        "name": "indestructible_vehicles",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether Indestructible Vehicles are enabled or not."
+      },
+      {
+        "name": "lives_per_round",
+        "namespace": "game",
+        "type": "property",
+        "description": "The number of lives each player has per round, as set in the Custom Game options."
+      },
+      {
+        "name": "loadout_cam_time",
+        "namespace": "game",
+        "type": "property",
+        "description": "The Initial Loadout Camera duration."
+      },
+      {
+        "name": "perfection_enabled",
+        "namespace": "game",
+        "type": "property",
+        "description": "Indicates whether it is possible to earn a Perfection Medal in this game variant."
+      },
+      {
+        "name": "powerup_duration_blue",
+        "namespace": "game",
+        "type": "property",
+        "description": "The duration of the Blue Powerup (active camo), in seconds."
+      },
+      {
+        "name": "powerup_duration_red",
+        "namespace": "game",
+        "type": "property",
+        "description": "The duration of the Red Powerup (overshields), in seconds."
+      },
+      {
+        "name": "powerup_duration_yellow",
+        "namespace": "game",
+        "type": "property",
+        "description": "The duration of the Yellow Powerup (custom), in seconds."
+      },
+      {
+        "name": "proximity_voice",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether Proximity Voice is enabled."
+      },
+      {
+        "name": "respawn_growth",
+        "namespace": "game",
+        "type": "property",
+        "description": "The base respawn growth time for all players, in seconds."
+      },
+      {
+        "name": "respawn_time",
+        "namespace": "game",
+        "type": "property",
+        "description": "The base respawn time for all players, in seconds."
+      },
+      {
+        "name": "respawn_traits_time",
+        "namespace": "game",
+        "type": "property",
+        "description": "The number of seconds a player has Respawn Traits for."
+      },
+      {
+        "name": "round_limit",
+        "namespace": "game",
+        "type": "property",
+        "description": "The number of rounds."
+      },
+      {
+        "name": "round_time_limit",
+        "namespace": "game",
+        "type": "property",
+        "description": "The round time limit."
+      },
+      {
+        "name": "round_timer",
+        "namespace": "game",
+        "type": "property",
+        "description": "The current round's remaining time."
+      },
+      {
+        "name": "rounds_to_win",
+        "namespace": "game",
+        "type": "property",
+        "description": "The number of rounds that a player or team must win in order to win the match."
+      },
+      {
+        "name": "score_to_win",
+        "namespace": "game",
+        "type": "property",
+        "description": "The score to win."
+      },
+      {
+        "name": "sudden_death_time",
+        "namespace": "game",
+        "type": "property",
+        "description": "The amount of Sudden Death time."
+      },
+      {
+        "name": "sudden_death_timer",
+        "namespace": "game",
+        "type": "property",
+        "description": "The current round's remaining Sudden Death time."
+      },
+      {
+        "name": "suicide_penalty",
+        "namespace": "game",
+        "type": "property",
+        "description": "The suicide penalty time for respawning players, in seconds."
+      },
+      {
+        "name": "symmetry",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether this match is symmetric."
+      },
+      {
+        "name": "symmetry_get",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether this match is symmetric."
+      },
+      {
+        "name": "team_lives_per_round",
+        "namespace": "game",
+        "type": "property",
+        "description": "The number of lives each team has per round, as set in the Custom Game options."
+      },
+      {
+        "name": "teams_enabled",
+        "namespace": "game",
+        "type": "property",
+        "description": "Whether teams are enabled."
+      },
+      {
+        "name": "end_round",
+        "namespace": "game",
+        "type": "action",
+        "description": "Ends the round."
+      },
+      {
+        "name": "hs_function_call",
+        "namespace": "game",
+        "type": "action",
+        "description": "MCC-exclusive: Call HaloScript functions made available by the current map; intended for mods that rely on map-and-Megalo pairs."
+      },
+      {
+        "name": "play_sound_for",
+        "namespace": "game",
+        "type": "action",
+        "description": "Play a sound."
+      },
+      {
+        "name": "show_message_to",
+        "alias": "hud_post_message",
+        "namespace": "game",
+        "type": "action",
+        "description": "Display a message in the kill feed."
+      },
+
+
+
+      {
+        "name": "number[n]",
+        "namespace": "global",
+        "type": "member",
+        "description": "Globally scoped numbers. Twelve are available, numbered from 0 to 11."
+      },
+      {
+        "name": "object[n]",
+        "namespace": "global",
+        "type": "member",
+        "description": "Globally scoped objects. Sixteen are available, numbered from 0 to 15."
+      },
+      {
+        "name": "player[n]",
+        "namespace": "global",
+        "type": "member",
+        "description": "Globally scoped players. Eight are available, numbered from 0 to 7."
+      },
+      {
+        "name": "team[n]",
+        "namespace": "global",
+        "type": "member",
+        "description": "Globally scoped teams. Eight are available, numbered from 0 to 7."
+      },
+      {
+        "name": "timer[n]",
+        "namespace": "global",
+        "type": "member",
+        "description": "Globally scoped timers. Eight are available, numbered from 0 to 7."
+      },
+
+
+
+      {
+        "name": "number[n]",
+        "namespace": "Temporaries",
+        "type": "member",
+        "description": "Temporary numbers. Ten are available, numbered from 0 to 9."
+      },
+      {
+        "name": "object[n]",
+        "namespace": "Temporaries",
+        "type": "member",
+        "description": "Temporary objects. Eight are available, numbered from 0 to 7."
+      },
+      {
+        "name": "player[n]",
+        "namespace": "Temporaries",
+        "type": "member",
+        "description": "Temporary players. Three are available, numbered from 0 to 2."
+      },
+      {
+        "name": "team[n]",
+        "namespace": "Temporaries",
+        "type": "member",
+        "description": "Temporary teams. Six are available, numbered from 0 to 5."
+      },
+
+
+      {
+        "name": "biped",
+        "namespace": "player",
+        "type": "property",
+        "description": "The player's current biped."
+      },
+      {
+        "name": "money",
+        "namespace": "player",
+        "type": "property",
+        "description": "The player's money, to spend on requisitions as part of an unimplemented gameplay system."
+      },
+      {
+        "name": "rating",
+        "namespace": "player",
+        "type": "property",
+        "description": "The player's Arena rating."
+      },
+      {
+        "name": "score",
+        "namespace": "player",
+        "type": "property",
+        "description": "The player's current score."
+      },
+      {
+        "name": "script_stat[n]",
+        "namespace": "player",
+        "type": "property",
+        "description": "The value of a scripted Post-Game Carnage Report stat for this player."
+      },
+      {
+        "name": "team",
+        "namespace": "player",
+        "type": "property",
+        "description": "The player's owner team."
+      },
+      {
+        "name": "frag_grenades",
+        "namespace": "player",
+        "type": "accessor",
+        "description": "The player's current frag grenade count."
+      },
+      {
+        "name": "plasma_grenades",
+        "namespace": "player",
+        "type": "accessor",
+        "description": "The player's current plasma grenade count."
+      },
+      {
+        "name": "assisted_kill_of",
+        "namespace": "player",
+        "type": "condition",
+        "description": "Checks whether one player assisted another in killing a third."
+      },
+      {
+        "name": "is_elite",
+        "namespace": "player",
+        "type": "condition",
+        "description": "Checks whether a player's current species is Elite."
+      },
+      {
+        "name": "is_fireteam_leader",
+        "namespace": "player",
+        "type": "condition",
+        "description": "This function always returns false."
+      },
+      {
+        "name": "is_monitor",
+        "namespace": "player",
+        "type": "condition",
+        "description": "Checks whether a player's current species is Monitor."
+      },
+      {
+        "name": "is_not_respawning",
+        "namespace": "player",
+        "type": "condition",
+        "description": "Checks whether a player is not respawning."
+      },
+      {
+        "name": "is_spartan",
+        "namespace": "player",
+        "type": "condition",
+        "description": "Checks whether a player's current species is Spartan."
+      },
+      {
+        "name": "killer_type_is",
+        "namespace": "player",
+        "type": "condition",
+        "description": "Check what killed a player."
+      },
+      {
+        "name": "add_weapon",
+        "namespace": "player",
+        "type": "action",
+        "description": "Give a weapon to a player."
+      },
+      {
+        "name": "apply_traits",
+        "namespace": "player",
+        "type": "action",
+        "description": "Apply a set of player traits to a player for the current tick."
+      },
+      {
+        "name": "force_into_vehicle",
+        "namespace": "player",
+        "type": "action",
+        "description": "Force a player into a vehicle if any seat is available."
+      },
+      {
+        "name": "get_armor_ability",
+        "alias": "try_get_armor_ability",
+        "namespace": "player",
+        "type": "action",
+        "description": "Identify the player's current Armor Ability."
+      },
+      {
+        "name": "get_button_press_duration",
+        "alias": "get_button_time",
+        "namespace": "player",
+        "type": "action",
+        "description": "MCC-exclusive: Detect whether a player is holding a given button down. Intended for debugging purposes only."
+      },
+      {
+        "name": "get_crosshair_target",
+        "namespace": "player",
+        "type": "action",
+        "description": "Identify the object that the player is aiming at, if that object is changing the player's reticle color."
+      },
+      {
+        "name": "get_fireteam",
+        "namespace": "player",
+        "type": "action",
+        "description": "Returns the index of the fireteam that a player is on."
+      },
+      {
+        "name": "get_scoreboard_pos",
+        "namespace": "player",
+        "type": "action",
+        "description": "Get a player's position on the scoreboard."
+      },
+      {
+        "name": "get_spree_count",
+        "namespace": "player",
+        "type": "action",
+        "description": "Get the number of players that someone has killed without dying."
+      },
+      {
+        "name": "get_vehicle",
+        "alias": "try_get_vehicle",
+        "namespace": "player",
+        "type": "action",
+        "description": "Identify the vehicle that a player is in."
+      },
+      {
+        "name": "get_weapon",
+        "alias": "try_get_weapon",
+        "namespace": "player",
+        "type": "action",
+        "description": "Identify the player's current weapon."
+      },
+      {
+        "name": "increment_req_money_by",
+        "namespace": "player",
+        "type": "action",
+        "description": "A development leftover related to a scrapped Requisition system."
+      },
+      {
+        "name": "record_griefer_penalty",
+        "namespace": "player",
+        "type": "action",
+        "description": "The specific function of this action is not known. Presumably it has something to do with keeping track of bad behavior in-game."
+      },
+      {
+        "name": "set_biped",
+        "namespace": "player",
+        "type": "action",
+        "description": "Revoke control of a player's current biped, and grant control of another one."
+      },
+      {
+        "name": "set_co_op_spawning",
+        "namespace": "player",
+        "type": "action",
+        "description": "Control whether a player uses co-op spawning."
+      },
+      {
+        "name": "set_fireteam",
+        "namespace": "player",
+        "type": "action",
+        "description": "Sets a player's current fireteam index."
+      },
+      {
+        "name": "set_loadout_palette",
+        "namespace": "player",
+        "type": "action",
+        "description": "Sets which loadout palette a player can select loadouts from."
+      },
+      {
+        "name": "set_objective_allegiance_icon",
+        "alias": "set_round_card_icon",
+        "namespace": "player",
+        "type": "action",
+        "description": "Change the round card's icon."
+      },
+      {
+        "name": "set_objective_allegiance_name",
+        "alias": "set_round_card_text",
+        "namespace": "player",
+        "type": "action",
+        "description": "Change the round card's icon caption."
+      },
+      {
+        "name": "set_objective_text",
+        "alias": "set_round_card_title",
+        "namespace": "player",
+        "type": "action",
+        "description": "Change the round card's description text."
+      },
+      {
+        "name": "set_primary_respawn_object",
+        "namespace": "player",
+        "type": "action",
+        "description": "This function appears to set a player's default respawn object, when co-op spawning is enabled."
+      },
+      {
+        "name": "set_req_purchase_modes",
+        "namespace": "player",
+        "type": "action",
+        "description": "A development leftover related to a scrapped Requisition system."
+      },
+      {
+        "name": "set_requisition_palette",
+        "namespace": "player",
+        "type": "action",
+        "description": "A development leftover related to a scrapped Requisition system."
+      },
+      {
+        "name": "set_respawn_vehicle",
+        "namespace": "player",
+        "type": "action",
+        "description": "MCC-exclusive: Automatically spawn players inside of vehicles, without having to manually create vehicles and force players into them."
+      },
+      {
+        "name": "set_vehicle_spawning_enabled",
+        "namespace": "player",
+        "type": "action",
+        "description": "MCC-exclusive: Although intended to let you control whether players spawn in vehicles or not, this function doesn't appear to actually do anything."
+      },
+      {
+        "name": "try_get_death_damage_mod",
+        "alias": "get_death_damage_mod",
+        "namespace": "player",
+        "type": "action",
+        "description": "Identify the modifier for the damage that killed this player."
+      },
+      {
+        "name": "try_get_death_damage_type",
+        "alias": "get_death_damage_type",
+        "namespace": "player",
+        "type": "action",
+        "description": "Identify the type of damage that killed this player."
+      },
+      {
+        "name": "try_get_killer",
+        "alias": "get_killer",
+        "namespace": "player",
+        "type": "action",
+        "description": "Identify the player who killed this player."
+      },
+
+      {
+        "name": "spawn_sequence",
+        "namespace": "object",
+        "type": "property",
+        "description": "The object's Spawn Sequence value set in Forge."
+      },
+      {
+        "name": "team",
+        "namespace": "object",
+        "type": "property",
+        "description": "The object's owner team."
+      },
+      {
+        "name": "health",
+        "namespace": "object",
+        "type": "accessor",
+        "description": "The object's current health."
+      },
+      {
+        "name": "max_health",
+        "namespace": "object",
+        "type": "accessor",
+        "description": "The object's maximum health."
+      },
+      {
+        "name": "max_shields",
+        "namespace": "object",
+        "type": "accessor",
+        "description": "The object's maximum shields."
+      },
+      {
+        "name": "shields",
+        "namespace": "object",
+        "type": "accessor",
+        "description": "The object's current shields."
+      },
+      {
+        "name": "has_forge_label",
+        "namespace": "object",
+        "type": "condition",
+        "description": "Check whether this object has a given Forge label."
+      },
+      {
+        "name": "is_in_use",
+        "namespace": "object",
+        "type": "condition",
+        "description": "Check whether this object is an Armor Ability currently being used by a player."
+      },
+      {
+        "name": "is_of_type",
+        "namespace": "object",
+        "type": "condition",
+        "description": "Check whether this object is of a given type."
+      },
+      {
+        "name": "is_out_of_bounds",
+        "namespace": "object",
+        "type": "condition",
+        "description": "Check whether this object is out of bounds."
+      },
+      {
+        "name": "shape_contains",
+        "namespace": "object",
+        "type": "condition",
+        "description": "Check whether this object's shape boundary contains another object."
+      },
+      {
+        "name": "add_weapon",
+        "namespace": "object",
+        "type": "action",
+        "description": "Give a weapon to a biped, even if it isn't player-controlled."
+      },
+      {
+        "name": "animate_device_position",
+        "namespace": "object",
+        "type": "action",
+        "description": "Animate a device machine's position over time."
+      },
+      {
+        "name": "apply_shape_color_from_player_member",
+        "namespace": "object",
+        "type": "action",
+        "description": "Recolor an object's shape boundary based on a player variable."
+      },
+      {
+        "name": "attach_to",
+        "namespace": "object",
+        "type": "action",
+        "description": "Attaches this object to another one."
+      },
+      {
+        "name": "copy_rotation_from",
+        "namespace": "object",
+        "type": "action",
+        "description": "Rotate one object to match another."
+      },
+      {
+        "name": "delete",
+        "namespace": "object",
+        "type": "action",
+        "description": "Delete this object from the game world."
+      },
+      {
+        "name": "detach",
+        "namespace": "object",
+        "type": "action",
+        "description": "Detaches this object from anything it is attached to."
+      },
+      {
+        "name": "enable_spawn_zone",
+        "namespace": "object",
+        "type": "action",
+        "description": "Sets whether a Respawn Zone is enabled and able to affect spawning."
+      },
+      {
+        "name": "face_toward",
+        "namespace": "object",
+        "type": "action",
+        "description": "Rotate one object to face another."
+      },
+      {
+        "name": "get_carrier",
+        "alias": "try_get_carrier",
+        "namespace": "object",
+        "type": "action",
+        "description": "Identify the player carrying a weapon or Armor Ability."
+      },
+      {
+        "name": "get_device_position",
+        "namespace": "object",
+        "type": "action",
+        "description": "Gets the current position level of a device machine."
+      },
+      {
+        "name": "get_device_power",
+        "namespace": "object",
+        "type": "action",
+        "description": "Gets the current power level of a device machine."
+      },
+      {
+        "name": "get_distance_to",
+        "namespace": "object",
+        "type": "action",
+        "description": "Returns the distance between this object and another."
+      },
+      {
+        "name": "get_orientation",
+        "namespace": "object",
+        "type": "action",
+        "description": "Returns a number representing the object's overall rotation."
+      },
+      {
+        "name": "get_speed",
+        "namespace": "object",
+        "type": "action",
+        "description": "Returns the object's speed in feet per second."
+      },
+      {
+        "name": "kill",
+        "namespace": "object",
+        "type": "action",
+        "description": "Kill an object."
+      },
+      {
+        "name": "place_at_me",
+        "alias": "create_object",
+        "namespace": "object",
+        "type": "action",
+        "description": "Spawn a new object at this object."
+      },
+      {
+        "name": "place_between_me_and",
+        "namespace": "object",
+        "type": "action",
+        "description": "Spawn a new object between this object and another."
+      },
+      {
+        "name": "push_upward",
+        "alias": "apply_upward_impulse",
+        "namespace": "object",
+        "type": "action",
+        "description": "Apply a random mostly-upward force to the object."
+      },
+      {
+        "name": "remove_weapon",
+        "namespace": "object",
+        "type": "action",
+        "description": "Remove a weapon from a biped."
+      },
+      {
+        "name": "set_device_actual_position",
+        "namespace": "object",
+        "type": "action",
+        "description": "No description available."
+      },
+      {
+        "name": "set_device_animation_position",
+        "namespace": "object",
+        "type": "action",
+        "description": "Sets the current animation and position of a device machine."
+      },
+      {
+        "name": "set_device_position",
+        "namespace": "object",
+        "type": "action",
+        "description": "Sets the current position level of a device machine."
+      },
+      {
+        "name": "set_device_power",
+        "namespace": "object",
+        "type": "action",
+        "description": "Sets the current power level of a device machine."
+      },
+      {
+        "name": "set_garbage_collection_disabled",
+        "namespace": "object",
+        "type": "action",
+        "description": "Disables garbage collection for objects."
+      },
+      {
+        "name": "set_hidden",
+        "namespace": "object",
+        "type": "action",
+        "description": "MCC-exclusive: Make an object invisible."
+      },
+      {
+        "name": "set_invincibility",
+        "namespace": "object",
+        "type": "action",
+        "description": "Make an object invincible."
+      },
+      {
+        "name": "set_pickup_permissions",
+        "namespace": "object",
+        "type": "action",
+        "description": "Adjust which players can pick up a weapon."
+      },
+      {
+        "name": "set_progress_bar",
+        "namespace": "object",
+        "type": "action",
+        "description": "Set whether an object displays a progress bar to certain players when they're inside of the object's shape volume, and sets which players are eligible to see it."
+      },
+      {
+        "name": "set_scale",
+        "namespace": "object",
+        "type": "action",
+        "description": "Resize an object."
+      },
+      {
+        "name": "set_shape",
+        "alias": "set_boundary",
+        "namespace": "object",
+        "type": "action",
+        "description": "Change an object's shape boundary."
+      },
+      {
+        "name": "set_shape_visibility",
+        "namespace": "object",
+        "type": "action",
+        "description": "Adjust which players can see an object's shape boundary."
+      },
+      {
+        "name": "set_spawn_location_fireteams",
+        "alias": "set_fireteam_respawn_filter",
+        "namespace": "object",
+        "type": "action",
+        "description": "Adjust which fireteam can spawn at a location."
+      },
+      {
+        "name": "set_spawn_location_permissions",
+        "alias": "set_respawn_filter",
+        "namespace": "object",
+        "type": "action",
+        "description": "Adjust which players can spawn at a location."
+      },
+      {
+        "name": "set_waypoint_icon",
+        "namespace": "object",
+        "type": "action",
+        "description": "Change the icon that this waypoint displays."
+      },
+      {
+        "name": "set_waypoint_priority",
+        "namespace": "object",
+        "type": "action",
+        "description": "Change the waypoint's visual priority."
+      },
+      {
+        "name": "set_waypoint_range",
+        "namespace": "object",
+        "type": "action",
+        "description": "Change the distances at which waypoints are visible."
+      },
+      {
+        "name": "set_waypoint_text",
+        "namespace": "object",
+        "type": "action",
+        "description": "Set the text of an object's waypoint."
+      },
+      {
+        "name": "set_waypoint_timer",
+        "namespace": "object",
+        "type": "action",
+        "description": "Change the timer that a waypoint displays."
+      },
+      {
+        "name": "set_waypoint_visibility",
+        "namespace": "object",
+        "type": "action",
+        "description": "Adjust who can see this object's waypoint."
+      },
+      {
+        "name": "set_weapon_pickup_priority",
+        "namespace": "object",
+        "type": "action",
+        "description": "Set how a weapon is picked up."
+      },
+
+
+      {
+        "name": "score",
+        "namespace": "team",
+        "type": "property",
+        "description": "The team's current score."
+      },
+      {
+        "name": "script_stat[n]",
+        "namespace": "team",
+        "type": "property",
+        "description": "The value of a scripted Post-Game Carnage Report stat for this player."
+      },
+      {
+        "name": "has_alliance_status",
+        "namespace": "team",
+        "type": "condition",
+        "description": "Check this team's relationship with another team."
+      },
+      {
+        "name": "has_any_players",
+        "namespace": "team",
+        "type": "condition",
+        "description": "Check whether a team still has players on it."
+      },
+      {
+        "name": "get_scoreboard_pos",
+        "namespace": "team",
+        "type": "action",
+        "description": "Get a team's position on the scoreboard."
+      },
+      {
+        "name": "set_co_op_spawning",
+        "namespace": "team",
+        "type": "action",
+        "description": "Control whether a team uses co-op spawning."
+      },
+      {
+        "name": "set_primary_respawn_object",
+        "namespace": "team",
+        "type": "action",
+        "description": "This function appears to set a team's default respawn object, when co-op spawning is enabled."
+      },
+      {
+        "name": "set_respawn_vehicle",
+        "namespace": "team",
+        "type": "action",
+        "description": "MCC-exclusive: Automatically spawn players inside of vehicles, without having to manually create vehicles and force players into them."
+      },
+      {
+        "name": "set_vehicle_spawning_enabled",
+        "namespace": "team",
+        "type": "action",
+        "description": "MCC-exclusive: Although intended to let you control whether players spawn in vehicles or not, this function doesn't appear to actually do anything."
+      },
+
+      {
+        "name": "is_zero",
+        "namespace": "timer",
+        "type": "condition",
+        "description": "Checks whether the timer's value is zero."
+      },
+      {
+        "name": "reset",
+        "namespace": "timer",
+        "type": "action",
+        "description": "Reset a timer to its initial value."
+      },
+      {
+        "name": "set_rate",
+        "namespace": "timer",
+        "type": "action",
+        "description": "Set the rate and direction in which the timer advances."
+      },
+      {
+        "name": "damage_reporting_modifier",
+        "namespace": "enums",
+        "type": "enum",
+        "description": "An enum containing values that can be returned by player.get_death_damage_mod."
+      },
+      {
+        "name": "damage_reporting_type",
+        "namespace": "enums",
+        "type": "enum",
+        "description": "An enum containing values that can be returned by player.get_death_damage_type."
+      },
+      {
+        "name": "orientation",
+        "namespace": "enums",
+        "type": "enum",
+        "description": "An enum containing values that can be returned by object.get_orientation."
+      }
+
+    ]
+  }
+  
