@@ -14,22 +14,99 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
     });
+    const toggle = document.getElementById('theme-toggle');
+    // --hover-anim-primary: #000080;
+    // --hover-anim-secondary: #05055f;
     
-    
-    
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-        if (document.body.classList.contains('light-theme')) {
-            document.body.classList.remove('light-theme');
-            document.documentElement.style.setProperty('--background-color', '#02022a');
+    // Load the theme from localStorage
+var savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.body.classList.add(savedTheme);
+    setThemeColors(savedTheme);
+}
+if (!savedTheme) {
+    //Apply system theme
+    document.body.classList.add("System");
+    setThemeColors("System");
+}
+
+document.body.style.display = "grid";
+
+toggle.addEventListener('click', function() {
+    document.body.style.transition = "background 0.4s";
+    document.querySelector("#main").style.transition = "background 0.6s";
+    document.querySelector("#sidebar").style.transition = "background 0.6s";
+    document.querySelector(".dropdown-content").style.transition = "background 0.6s";
+    document.querySelector("header").style.transition = "background 0.6s";
+    document.querySelector(".dropdown-toggle").style.transition = "background 0.6s";
+    document.querySelector(".dropdown").style.transition = "background 0.6s";
+    var theme;
+    if (document.body.classList.contains('Light')) {
+        document.body.classList.remove('Light');
+        document.body.classList.add('Dark');
+        theme = 'Dark';
+    } else if (document.body.classList.contains('Dark')) {
+        document.body.classList.remove('Dark');
+        theme = 'System';
+    } else {
+        document.body.classList.add('Light');
+        theme = 'Light';
+    }
+    setThemeColors(theme);
+    // Save the theme to localStorage
+    localStorage.setItem('theme', theme);
+
+    // Remove and re-add the animation class to replay the animation
+    this.classList.remove('rotate');
+    void this.offsetWidth; // Trigger a reflow
+    this.classList.add('rotate');
+});
+
+function setThemeColors(theme) {
+    if (theme === 'Light') {
+        document.documentElement.style.setProperty('--background-color', '#ffffff');
+        document.documentElement.style.setProperty('--text-color', '#000000');
+        document.documentElement.style.setProperty('--secondary-color', '#EEE');
+        document.documentElement.style.setProperty('--hover-anim-primary', '#AAA');
+        document.documentElement.style.setProperty('--hover-anim-secondary', '#EEE');
+    } else if (theme === 'Dark') {
+        document.documentElement.style.setProperty('--background-color', '#1b1b1b');
+        document.documentElement.style.setProperty('--text-color', '#ffffff');
+        document.documentElement.style.setProperty('--secondary-color', '#4e4e4e');
+        document.documentElement.style.setProperty('--hover-anim-primary', '#000080');
+        document.documentElement.style.setProperty('--hover-anim-secondary', '#05055f');
+    } else {
+        // Use system theme
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Dark theme
+            document.documentElement.style.setProperty('--background-color', '#1b1b1b');
             document.documentElement.style.setProperty('--text-color', '#ffffff');
-            document.documentElement.style.setProperty('--secondary-color', '#01011b');
+            document.documentElement.style.setProperty('--secondary-color', '#4e4e4e');
+            document.documentElement.style.setProperty('--hover-anim-primary', '#000080');
+            document.documentElement.style.setProperty('--hover-anim-secondary', '#05055f');
         } else {
-            document.body.classList.add('light-theme');
+            // Light theme
             document.documentElement.style.setProperty('--background-color', '#ffffff');
             document.documentElement.style.setProperty('--text-color', '#000000');
             document.documentElement.style.setProperty('--secondary-color', '#EEE');
+            document.documentElement.style.setProperty('--hover-anim-primary', '#AAA');
+            document.documentElement.style.setProperty('--hover-anim-secondary', '#EEE');
         }
-    });
+    }
+
+    // Remove the existing theme label, if any
+var existingLabel = document.getElementById('theme-label');
+if (existingLabel) {
+    existingLabel.remove();
+}
+
+// Create a new text node and append it to the toggle element
+var label = document.createElement('p');
+label.id = 'theme-label';
+label.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+toggle.parentNode.insertBefore(label, toggle.nextSibling);
+
+}
     
     
     document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {

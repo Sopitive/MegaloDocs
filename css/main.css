@@ -2,12 +2,14 @@
     --background-color: #1b1b1b;
     --text-color: #FFF;
     --secondary-color: #4e4e4e;
+    --hover-anim-primary: #000080;
+    --hover-anim-secondary: #05055f;
 }
 
 
 
 body {
-    display: grid;
+    display: none;
     grid-template-columns: 300px auto;
     grid-template-rows: 100px auto;
     background-color: var(--background-color);
@@ -57,6 +59,12 @@ header {
 .logo {
     font-family: "Brush Script MT";
     font-size: 27px;
+    color: var(--text-color)
+}
+
+.logo svg {
+    stroke: var(--text-color);
+    fill: var(--text-color)
 }
 
 header div {
@@ -70,7 +78,7 @@ header div:first-child {
 }
 
 header a {
-    color: var(--text-color); /* White links */
+    color: var(--text-color);
     text-decoration: none;
     
 }
@@ -78,9 +86,30 @@ header a {
 header button {
     background-color: transparent;
     border: none;
-    color: var(--text-color); /* White text */
+    color: var(--text-color);
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
+}
+
+#theme-label {
+    width: 100px;
+}
+
+
+header button.rotate {
+    animation: rotate 0.6s linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-330deg);
+    }
 }
 
 header nav ul {
@@ -95,7 +124,7 @@ header nav ul li {
 }
 
 pre {
-    border: solid white 1px;
+    border: solid var(--text-color) 1px;
     box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.50); /* Shadow effect */
 }
 
@@ -135,11 +164,11 @@ nav a {
     background-position: 100%;
     transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
     background-size: 200% 100%;
-    background-image: linear-gradient(to right, transparent 100%, #000080 0%);
+    background-image: linear-gradient(to right, transparent 100%, var(--hover-anim-primary) 0%);
 }
 
 nav a:hover {
-    background-image: linear-gradient(to right, #000080, #05055f 50%, transparent 50%);
+    background-image: linear-gradient(to right, var(--hover-anim-primary), var(--hover-anim-secondary) 50%, transparent 50%);
     background-position: 0 0;
 }
 
@@ -159,7 +188,7 @@ nav a:hover {
     background-position: 100%;
     transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
     background-size: 200% 100%;
-    background-image: linear-gradient(to right, transparent 100%, #000080 0%);
+    background-image: linear-gradient(to right, transparent 100%, var(--hover-anim-primary) 0%);
     text-shadow: 2px 2px 4px #000000; /* Shadow effect */
     border-radius: 5px; /* Rounded corners */
     margin-right: -20px;
@@ -167,13 +196,13 @@ nav a:hover {
 
 #sidebar a:hover, #sidebar button:hover {
     /* Remove padding-left: 20px; */
-    background-image: linear-gradient(to right, #000080, #05055f 50%, transparent 50%);
+    background-image: linear-gradient(to right, var(--hover-anim-primary), var(--hover-anim-secondary) 50%, transparent 50%);
     background-position: 0 0;
 }
 
 #sidebar a.active {
     padding-left: 20px; /* Indent text for active link */
-    background-image: linear-gradient(to right, #000080, #020235 50%, transparent 50%);
+    background-image: linear-gradient(to right, var(--hover-anim-primary), var(--hover-anim-secondary) 50%, transparent 50%);
     background-position: 0 0;
 }
 
@@ -205,8 +234,8 @@ nav a:hover {
     display: block;
     transition: background 0.4s ease-in-out;
     background-size: 200% 100%;
-    background-image: linear-gradient(to right, transparent 100%, #000080 0%);
-    text-shadow: 2px 2px 4px #000000;
+    background-image: linear-gradient(to right, transparent 100%, var(--hover-anim-primary) 0%);
+    text-shadow: 2px 2px 4px var(--text-color);
     border-radius: 5px;
     padding-left: 20px;
 }
@@ -228,13 +257,15 @@ nav a:hover {
 }
 
 .dropdown > a::after {
+    color: var(--text-color);
     content: '▼'; /* Dropdown icon */
     /* Remove float: right; */
     margin-left: 10px; /* Space between the icon and the text */
+    
 }
 
 .dropdown-content a:hover {
-    background-image: linear-gradient(to right, #000080, #0000ff 50%, transparent 50%);
+    background-image: linear-gradient(to right, var(--hover-anim-primary), var(--hover-anim-secondary) 50%, transparent 50%);
     background-position: 0 0;
     padding-left: 30px;
 }
@@ -243,7 +274,7 @@ nav a:hover {
     content: '';
     border-style: solid;
     border-width: 5px 0 5px 5px;
-    border-color: transparent transparent transparent rgb(255, 255, 255);
+    border-color: transparent transparent transparent var(--text-color);
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
