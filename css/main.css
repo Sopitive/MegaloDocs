@@ -1,17 +1,17 @@
 :root {
-    --background-color: #02022a;
+    --background-color: #1b1b1b;
     --text-color: #FFF;
-    --secondary-color: #01011b;
+    --secondary-color: #4e4e4e;
 }
 
 
 
 body {
     display: grid;
-    grid-template-columns: 300px auto; /* Adjust 300px to the width of your sidebar */
-    grid-template-rows: 100px auto; /* Adjust 80px to the height of your header */
-    background-color: var(--background-color); /* Navy blue */
-    color: var(--text-color); /* White text */
+    grid-template-columns: 300px auto;
+    grid-template-rows: 100px auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     margin: 0;
 }
@@ -21,10 +21,36 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary-color); /* Navy blue */
+    background-color: var(--background-color); /* Navy blue */
     padding: 20px;
     color: var(--text-color); /* White text */
-    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.50); /* Shadow effect */
+}
+
+#breadcrumb {
+    grid-column: 1 / -1; /* This will make the site-container span the full width of the grid */
+    grid-row: 2; /* This will make the site-container sit at the second row, just below the header */
+    background-color: var(--secondary-color);
+    height: 30px;
+    border: 1px solid #AAA;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    display: flex; /* Use flexbox to align the text vertically */
+    align-items: center; /* Align the text to the center vertically */
+    justify-content: left; /* Align the text to the center horizontally */
+    padding-left: 20px;
+}
+
+#breadcrumb a {
+    margin: 10px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px 0 10px 0;
+}
+
+#breadcrumb a:hover {
+    text-decoration: underline;
 }
 
 
@@ -68,26 +94,31 @@ header nav ul li {
     display: inline;
 }
 
+pre {
+    border: solid white 1px;
+    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.50); /* Shadow effect */
+}
+
 
 
 #sidebar-wrapper {
+    grid-column: 1;
     grid-row: 2;
     padding: 0;
     margin: 0;
     height: 100%;
     min-height: 100vh;
     background-color: var(--secondary-color); /* Slightly darker navy blue */
-    
+    margin-top: 35px;
 }
 
 #sidebar {
     /* Remove overflow-y: scroll; */
     font-size: 14px;
-    background-color: var(--secondary-color); /* Slightly darker navy blue */
+    background-color: var(--background-color); /* Slightly darker navy blue */
     padding: 20px;
     height: 100%;
     min-height: 100vh;
-    box-shadow: 0px 10px 5px 10px rgba(0,0,0,0.50); /* Shadow effect */
 }
 
 dd {
@@ -160,7 +191,7 @@ nav a:hover {
     position: relative; /* Changed from absolute to relative */
     min-width: 160px;
     z-index: 1;
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
 }
 
 .dropdown:hover .dropdown-content {
@@ -230,7 +261,7 @@ nav a:hover {
 #main {
     grid-column: 2; /* Start from the second column */
     grid-row: 2;
-    padding: 50px;
+    margin: 50px;
     font: "Helvetica Neue";
     word-spacing: 2px;
 }
