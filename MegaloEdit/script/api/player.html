@@ -57,6 +57,62 @@
             </dd>
 
             <dt>
+                add_weapon
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Gives an existing weapon object to the player.</p>
+                <p><strong>Syntax:</strong> <code>player.add_weapon(object)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/actions/add_weapon.html">player.add_weapon</a></p>
+            </dd>
+
+            <dt>
+                force_into_vehicle
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Forces the player into the specified vehicle. If no seat is specified, the player enters the first available seat.</p>
+                <p><strong>Syntax:</strong> <code>player.force_into_vehicle(object)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/actions/force_into_vehicle.html">player.force_into_vehicle</a></p>
+            </dd>
+
+            <dt>
+                set_biped
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Changes the player's biped type (e.g., from Spartan to Elite or Monitor).</p>
+                <p><strong>Syntax:</strong> <code>player.set_biped(type)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/actions/set_biped.html">player.set_biped</a></p>
+            </dd>
+
+            <dt>
+                set_objective_text
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Updates the objective text displayed on the player's HUD.</p>
+                <p><strong>Syntax:</strong> <code>player.set_objective_text(string)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/actions/set_objective_text.html">player.set_objective_text</a></p>
+            </dd>
+
+            <dt>
                 apply_player_traits
                 <div class="badge-container">
                     <span class="badge badge-reach">Reach</span>
@@ -80,17 +136,6 @@
             <dd>
                 <p>Returns the total number of ticks that a player has been holding an input button.</p>
                 <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/actions/get-button-time.html">player.get_button_time</a></p>
-            </dd>
-
-            <dt>
-                set_fireteam
-                <div class="badge-container">
-                    <span class="badge badge-reach">Reach</span>
-                </div>
-            </dt>
-            <dd>
-                <p>Sets which fireteam the player belongs to (specific to Reach's multi-team mechanics).</p>
-                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/actions/set_fireteam.html">player.set_fireteam</a></p>
             </dd>
 
             <dt>
@@ -132,6 +177,32 @@
             <dd>
                 <p>Returns true if the player's model species currently matches an Elite.</p>
                 <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/conditions/is_elite.html">player.is_elite</a></p>
+            </dd>
+
+            <dt>
+                is_not_respawning
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns true if the player is currently alive and not in the process of respawning.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/conditions/is_not_respawning.html">player.is_not_respawning</a></p>
+            </dd>
+
+            <dt>
+                is_out_of_bounds
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns true if the player is currently outside the soft kill or return-to-battle boundaries.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/player/conditions/is_out_of_bounds.html">player.is_out_of_bounds</a></p>
             </dd>
          </dl>
       </main>

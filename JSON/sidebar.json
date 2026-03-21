@@ -75,6 +75,16 @@
             "title": "Game",
             "path": "megaloedit/script/api/game.html",
             "children": null
+          },
+          {
+            "title": "Timer",
+            "path": "megaloedit/script/api/timer.html",
+            "children": null
+          },
+          {
+            "title": "UI Widget",
+            "path": "megaloedit/script/api/widget.html",
+            "children": null
           }
         ]
       }

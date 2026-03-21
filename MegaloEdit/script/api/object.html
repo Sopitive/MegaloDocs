@@ -70,6 +70,62 @@
             </dd>
 
             <dt>
+                copy_rotation_from
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Matches the current object's rotation to that of a target object.</p>
+                <p><strong>Syntax:</strong> <code>object.copy_rotation_from(target, bool)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/object/actions/copy_rotation_from.html">object.copy_rotation_from</a></p>
+            </dd>
+
+            <dt>
+                face_toward
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Orients the object to face directly toward a coordinate or another object.</p>
+                <p><strong>Syntax:</strong> <code>object.face_toward(target, offset)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/object/actions/face_toward.html">object.face_toward</a></p>
+            </dd>
+
+            <dt>
+                kill
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Instantly destroys the object, playing its respective death or destruction animation and effects.</p>
+                <p><strong>Syntax:</strong> <code>object.kill()</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/object/actions/kill.html">object.kill</a></p>
+            </dd>
+
+            <dt>
+                set_waypoint_visibility
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Controls whether a HUD waypoint is visible on this object for specific players or teams.</p>
+                <p><strong>Syntax:</strong> <code>object.set_waypoint_visibility(player_set, bool)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/object/actions/set_waypoint_visibility.html">object.set_waypoint_visibility</a></p>
+            </dd>
+
+            <dt>
                 set_boundary
                 <div class="badge-container">
                     <span class="badge badge-reach">Reach</span>
@@ -159,6 +215,19 @@
             <dd>
                 <p>Checks if the object has a specific Forge label assigned to it.</p>
                 <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/object/conditions/has_forge_label.html">object.has_forge_label</a></p>
+            </dd>
+
+            <dt>
+                is_in_use
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns true if a player is currently interacting with or occupying the object.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/object/conditions/is_in_use.html">object.is_in_use</a></p>
             </dd>
          </dl>
       </main>
