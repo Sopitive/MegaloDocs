@@ -75,9 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
         label.textContent = theme;
     }
 
+    // 0. Path & Root calculation (for relative path portability on GH Pages)
+    const scriptSrc = document.querySelector('script[src*="sidebar.js"]').src;
+    const rootPath = scriptSrc.split('/JS/sidebar.js')[0]; // Extract the full domain + repo subfolder
+
     // 2. Sidebar Loading & Rendering
     if (sidebarContainer) {
-        fetch('/JSON/sidebar.json?v=' + Date.now())
+        fetch(rootPath + '/JSON/sidebar.json?v=' + Date.now())
             .then(r => r.json())
             .then(data => {
                 renderSidebar(data);
@@ -96,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function renderSidebar(data) {
-        // Add Search Bar
+        // ... search logic ...
         sidebarContainer.innerHTML = '';
         const searchContainer = document.createElement('div');
         searchContainer.className = 'sidebar-search';
@@ -109,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchContainer.appendChild(searchInput);
         sidebarContainer.appendChild(searchContainer);
 
-        sidebarContainer.innerHTML += '<a href="/index.html" class="sidebar-home-link">Home</a>';
+        sidebarContainer.innerHTML += `<a href="${rootPath}/index.html" class="sidebar-home-link">Home</a>`;
         data.forEach(category => {
             const container = document.createElement('div');
             container.className = 'sidebar-category';
@@ -182,7 +186,12 @@ document.addEventListener('DOMContentLoaded', function() {
             a.textContent = item.title;
             a.style.flexGrow = '1';
             if (item.path) {
-                a.href = item.path;
+                // If the path is not absolute (starting with http), prepend rootPath
+                if (item.path.startsWith('http') || item.path.startsWith('#')) {
+                    a.href = item.path;
+                } else {
+                    a.href = rootPath + '/' + item.path;
+                }
                 a.classList.add('has-link');
             } else {
                 a.href = '#';
@@ -205,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 div.appendChild(toggleBtn); // Put arrow on the right
                 
                 li.appendChild(div);
-                const subUl = buildList(item.children);
+                const subUl = buildList(item.children); // Recursive call
                 subUl.style.display = 'block'; // Expanded by default
                 li.appendChild(subUl);
                 toggleBtn.classList.add('expanded');
@@ -231,10 +240,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function highlightActive() {
-        const path = window.location.pathname.replace(/\/$/, "");
+        const path = window.location.pathname;
         const links = sidebarContainer.querySelectorAll('a');
         links.forEach(link => {
-            if (link.pathname === path || (path === "" && link.pathname === "/index.html")) {
+            // Check if link matches path (handling repo subfolder)
+            if (link.href === window.location.href || link.pathname === path) {
                 link.classList.add('active');
                 let parent = link.closest('li');
                 while (parent) {
@@ -246,11 +256,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                     const grandParentLi = parent.parentElement.closest('li');
                     if (!grandParentLi) {
-                        // Check if we are in a top-level category
                         const categoryContent = parent.closest('.category-content');
-                        if (categoryContent) {
-                            categoryContent.style.display = 'block';
-                        }
+                        if (categoryContent) categoryContent.style.display = 'block';
                         break;
                     }
                     parent = grandParentLi;
@@ -264,16 +271,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const breadcrumb = document.getElementById('breadcrumb');
         if (!breadcrumb) return;
 
-        const segments = path.replace(/^\/|\/$/g, '').split('/');
-        const crumbs = [{ title: 'Home', path: '/index.html' }];
+        // Clean path of repo names for cleaner crumbs
+        const segments = path.split('/').filter(s => s && s.toLowerCase() !== "megalodocs");
+        const crumbs = [{ title: 'Home', path: rootPath + '/index.html' }];
         
-        // Try to find titles from path in sidebar data
-        let currentPath = "";
+        let currentRelPath = "";
         segments.forEach(seg => {
-            if (seg.toLowerCase() === "megalodocs") return;
-            currentPath += "/" + seg;
-            // Simple lookup logic or just capitalize segment
-            crumbs.push({ title: seg.charAt(0).toUpperCase() + seg.slice(1).replace(".html", ""), path: currentPath });
+            currentRelPath += "/" + seg;
+            crumbs.push({ 
+                title: seg.charAt(0).toUpperCase() + seg.slice(1).replace(".html", ""), 
+                path: rootPath + currentRelPath 
+            });
         });
 
         breadcrumb.innerHTML = crumbs.map(c => `<a href="${c.path}">${c.title}</a>`).join(' > ');
