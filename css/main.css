@@ -123,14 +123,61 @@ body > header nav a:hover {
     border: none;
     color: var(--text-color);
     cursor: pointer;
-    font-size: 1.2rem;
-    padding: 8px;
+    font-size: 1rem;
+    padding: 0;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
 }
 
 #theme-toggle:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+#theme-toggle.rotate {
+    transform: rotate(360deg);
+}
+
+#theme-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 !important;
+    opacity: 0.8;
+    user-select: none;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+}
+
+body > header > div > div:last-child {
+    display: flex !important;
+    align-items: center !important;
+    gap: 25px;
+    justify-content: flex-end;
+    min-width: 380px;
+}
+
+body > header > div > div:last-child > div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0 12px;
+    height: 32px;
+    min-width: 85px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
 }
 
 #sidebar-wrapper {
@@ -245,28 +292,43 @@ body > header nav a:hover {
     font-size: 0.85rem;
     padding: 12px 10px;
     color: var(--text-color);
-    opacity: 0.6;
+    opacity: 0.8;
     text-transform: uppercase;
     letter-spacing: 1px;
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s;
+}
+
+.category-header:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.category-header::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f054'; /* Chevron Right */
+    font-weight: 900;
+    font-size: 0.7rem;
+    transition: transform 0.3s;
+    opacity: 0.5;
+}
+
+.category-header:not(.collapsed)::after {
+    transform: rotate(90deg);
 }
 
 .category-header:first-child {
     margin-top: 0;
 }
 
-.category-header::after {
-    content: '\25BC';
-    font-size: 0.7rem;
-    transition: transform 0.2s;
-}
-
-.category-header.collapsed::after {
-    transform: rotate(-90deg);
+body > header > div > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 #main {
@@ -362,29 +424,7 @@ h2 {
 }
 
 .h2-toggle {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    margin-right: 15px;
-    transition: transform 0.2s;
-}
-
-.h2-toggle::after {
-    content: '';
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 4px;
-    left: 4px;
-}
-
-h2.collapsed .h2-toggle {
-    transform: rotate(-90deg);
+    display: none;
 }
 
 p {

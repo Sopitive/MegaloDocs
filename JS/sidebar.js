@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let label = document.getElementById('theme-label');
         if (!label) {
-            label = document.createElement('p');
+            label = document.createElement('span');
             label.id = 'theme-label';
             toggle.parentNode.insertBefore(label, toggle.nextSibling);
         }
@@ -310,17 +310,6 @@ document.addEventListener('DOMContentLoaded', function() {
             a.textContent = h.textContent;
             li.appendChild(a);
             ul.appendChild(li);
-
-            h.style.cursor = 'pointer';
-            h.innerHTML = `<span class="h2-toggle"></span>` + h.innerHTML;
-            h.addEventListener('click', () => {
-                h.classList.toggle('collapsed');
-                let next = h.nextElementSibling;
-                while (next && next.tagName !== 'H2') {
-                    next.style.display = h.classList.contains('collapsed') ? 'none' : 'block';
-                    next = next.nextElementSibling;
-                }
-            });
         });
         tocWrapper.appendChild(ul);
         document.body.appendChild(tocWrapper);
