@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
     --background-color: #ffffff;
     --text-color: #1f2937;
@@ -259,7 +260,7 @@ body > header nav a:hover {
 }
 
 .category-header::after {
-    content: '▼';
+    content: '\25BC';
     font-size: 0.7rem;
     transition: transform 0.2s;
 }

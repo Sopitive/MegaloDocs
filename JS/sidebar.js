@@ -185,51 +185,65 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function highlightActive() {
-        // Handle variations in how the URL might look (GH Pages subfolder, index.html omissions, etc.)
-        const currentURL = window.location.href.split('?')[0].split('#')[0];
+        const currentURL = window.location.href.split('?')[0].split('#')[0].replace(/\/$/, "").toLowerCase();
+        console.log("Sidebar: Attempting to highlight active link for:", currentURL);
         
         const links = sidebarContainer.querySelectorAll('a.has-link');
         let activeLink = null;
 
+        console.log("Sidebar: Checking " + links.length + " links...");
+
         links.forEach(link => {
-            if (link.href === currentURL) {
-                activeLink = link;
-            }
+            const rawHref = link.getAttribute('href');
+            if (!rawHref || rawHref === '#' || rawHref.startsWith('javascript:')) return;
+
+            try {
+                const linkURL = new URL(link.href, window.location.origin).href.split('?')[0].split('#')[0].replace(/\/$/, "").toLowerCase();
+                if (currentURL === linkURL) {
+                    activeLink = link;
+                }
+            } catch(e) { }
         });
 
         if (activeLink) {
+            console.log("Sidebar: MATCH FOUND!", activeLink.href);
             activeLink.classList.add('active');
             
-            // 1. Expand all parents
-            let parentLi = activeLink.closest('li');
-            while (parentLi) {
-                // Expand immediate children if it's a folder (not technically needed but better UX?)
-                // Actually, just expand all parents and their visibility
-                const parentUl = parentLi.parentElement.closest('ul');
-                if (parentUl) {
-                    parentUl.style.display = 'block';
-                    const parentRow = parentUl.parentElement.querySelector('.sidebar-item-row');
-                    if (parentRow) {
-                        const toggle = parentRow.querySelector('.submenu-toggle');
+            // 1. Force Expand ALL Parents (Bottom-Up)
+            let current = activeLink.parentElement;
+            while (current && current !== sidebarContainer) {
+                // Expand Sub-menus (ULs)
+                if (current.tagName === 'UL') {
+                    current.style.display = 'block';
+                    const row = current.parentElement.querySelector('.sidebar-item-row');
+                    if (row) {
+                        const toggle = row.querySelector('.submenu-toggle');
                         if (toggle) toggle.classList.add('expanded');
                     }
-                } else {
-                    // We are at the top-most UL within a category-content
-                    const categoryContent = parentLi.closest('.category-content');
-                    if (categoryContent) {
-                        categoryContent.style.display = 'block';
-                        const categoryHeader = categoryContent.previousElementSibling;
-                        if (categoryHeader) categoryHeader.classList.remove('collapsed');
-                    }
-                    break;
                 }
-                parentLi = parentUl.parentElement.closest('li');
+                
+                // Expand Main Categories (category-content)
+                if (current.classList.contains('category-content')) {
+                    current.style.display = 'block';
+                    const head = current.previousElementSibling;
+                    if (head && head.classList.contains('category-header')) {
+                        head.classList.remove('collapsed');
+                    }
+                }
+                
+                current = current.parentElement;
             }
 
-            // 2. Scroll into view
+            // 2. Aggressive Center Scroll
             setTimeout(() => {
                 activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 300);
+            }, 100);
+            
+            setTimeout(() => {
+                activeLink.scrollIntoView({ behavior: 'auto', block: 'center' });
+            }, 600);
+        } else {
+            console.warn("Sidebar: No active link match found for:", currentURL);
         }
     }
 
