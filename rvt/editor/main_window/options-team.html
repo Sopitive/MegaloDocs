@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Team Settings | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>Team Settings</h1>
+<p>
+         The <b>team settings</b> page allows you to edit settings related to team scoring 
+         and configuration. To edit settings for individual teams, refer to 
+         <a href="editor/main_window/options-team-specific.html">this page</a>.
+      </p>
+<img src="editor/main_window/options-team.png"/>
+<p>
+         The fields available to edit are as follows:
+      </p>
+<dl>
+<dt>Team Scoring Method</dt>
+<dd>Unknown. This may be related to the oldest Halo games' options to 
+            control how a team's score was computed from the scores of its players, 
+            but testing is pending. <i>Halo: Reach</i> official files seem to use 
+            the value 0.</dd>
+<dt>Designator Switch Type</dt>
+<dd>
+<p>This option controls how teams are remapped across rounds, but the 
+               meanings of its values are unknown.</p>
+<p>After each round in a match, teams will swap places; for example, in 
+               offense/defense game variants with two teams, each team will take turns 
+               playing the "defense" role. The game engine takes care of this behavior 
+               by remapping teams internally: the gametype script always treats "Red 
+               Team" (or <code>team[0]</code> internally) as Defense, and the game 
+               engine just lies about which team <em>is</em> "Red Team."</p>
+<p>This option, then, would presumably determine how teams are remapped. 
+               However, it is impossible to fully test its meanings without gathering 
+               up eight people to play game variants in-game.</p>
+</dd>
+</dl>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

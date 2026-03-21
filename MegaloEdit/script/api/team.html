@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Team | MegaloEdit Script API</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         <header><h1>Team</h1></header>
+         <p>
+            Teams are collections of players. In many gametypes, scores and victory conditions are calculated at the team level.
+         </p>
+
+         <h2>Actions</h2>
+         <dl>
+            <dt>
+                set_score
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Sets or adjusts the current score for the entire team.</p>
+                <p><strong>Syntax:</strong> <code>team.set_score(number)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/team/properties/score.html">team.score</a></p>
+            </dd>
+
+            <dt>
+                get_scoreboard_pos
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns the rank of this team relative to others on the scoreboard.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/team/actions/get_scoreboard_pos.html">team.get_scoreboard_pos</a></p>
+            </dd>
+
+            <dt>
+                set_co_op_spawning
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Enables or disables buddy-based spawning for all members of the team (Reach exclusive).</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/team/actions/set_co_op_spawning.html">team.set_co_op_spawning</a></p>
+            </dd>
+         </dl>
+
+         <h2>Member Conditions</h2>
+         <dl>
+            <dt>
+                has_any_players
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns true if the team contains at least one player.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/team/conditions/has_any_players.html">team.has_any_players</a></p>
+            </dd>
+         </dl>
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Main Window | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>Main Window</h1>
+<p>
+         The <b>main window</b> offers access to <i>Halo: Reach</i>'s most basic settings. Its 
+         exact contents will vary depending on the type of file you load; this article describes 
+         the contents for Firefight game variants.
+      </p>
+<img src="editor/main_window_ff/scenario.png"/>
+<p>
+         The pane on the left can be used to select a page to view.
+      </p>
+<p>
+         The pages in this window are:
+      </p>
+<dl>
+<dt><a href="editor/main_window_ff/metadata.html">Metadata</a></dt>
+<dd>Edit a game variant's title, description, and category.</dd>
+<dt><a href="editor/main_window_ff/scenario.html">Firefight Settings</a></dt>
+<dd>Edit basic settings related to Firefight.</dd>
+<dt><a href="editor/main_window_ff/lives.html">Player Lives</a></dt>
+<dd>Edit settings related to players' extra lives.</dd>
+<dt><a href="editor/main_window_ff/options-respawn.html">Spartan and Elite Respawn Settings</a></dt>
+<dd>Edit respawn times. Spartan and Elite players can be given different settings.</dd>
+<dt>Spartan and Elite Respawn Traits</dt>
+<dd>Edit the <a href="editor/main_window_ff/traits.html">traits</a> that players are briefly given after they 
+            respawn. Spartan and Elite players can be given different settings.</dd>
+<dt>Base Spartan Traits</dt>
+<dd>Edit the <a href="editor/main_window_ff/traits.html">traits</a> applied to all player-controlled Spartans.</dd>
+<dt>Base Elite Traits</dt>
+<dd>Edit the <a href="editor/main_window_ff/traits.html">traits</a> applied to all player-controlled Elites.</dd>
+<dt>Base Wave Traits</dt>
+<dd>Edit the <a href="editor/main_window_ff/traits-wave.html">traits</a> applied to all NPCs.</dd>
+<dt><a href="editor/main_window_ff/round.html">Round 1</a></dt>
+<dt>Round 2</dt>
+<dt>Round 3</dt>
+<dd>Edit the settings for each round.</dd>
+<dt><a href="editor/main_window_ff/bonus-wave.html">Bonus Wave</a></dt>
+<dd>Edit settings for the Bonus Wave.</dd>
+<dt><a href="editor/main_window_ff/custom-skull.html">Red Skull</a></dt>
+<dt>Blue Skull</dt>
+<dt>Yellow Skull</dt>
+<dd>Edit the effects of each Custom Skull.</dd>
+<dt><a href="editor/main_window_ff/options-general.html">General Settings</a></dt>
+<dd>Edit basic settings related to scoring and time limits.</dd>
+<dt><a href="editor/main_window_ff/options-social.html">Social Settings</a></dt>
+<dd>Edit settings related to chat and teamplay.</dd>
+<dt>Base Player Traits</dt>
+<dd>Edit the baseline <a href="editor/main_window_ff/traits.html">traits</a> that apply to all players. These 
+            are overridden by Base Spartan Traits and Base Elite Traits.</dd>
+<dt><a href="editor/main_window_ff/options-team.html">Team Settings</a></dt>
+<dd>Edit basic settings and internal configuration for teams.</dd>
+<dt><a href="editor/main_window_ff/options-team-specific.html">Team #</a></dt>
+<dd>Edit internal configuration for each individual team.</dd>
+<dt><a href="editor/main_window_ff/options-loadout.html">Loadout Settings</a></dt>
+<dd>Edit baseline settings for loadouts.</dd>
+</dl>
+<h2>Sections hidden by default</h2>
+<p>
+         Firefight files contain the same set of Custom Game options as normal Multiplayer 
+         game variants, but not all of these options are functional. By default, 
+         ReachVariantTool will hide Firefight settings that are known to be non-functional. 
+         Those settings include the following sections:
+      </p>
+<dl>
+<dt>Map and Game Settings</dt>
+<dd>Edit settings related to the map and powerups.</dd>
+<dt>Red Powerup Traits</dt>
+<dd>Edit the <a href="editor/main_window_ff/traits.html">traits</a> conferred by the Overshield powerup.</dd>
+<dt>Blue Powerup Traits</dt>
+<dd>Edit the <a href="editor/main_window_ff/traits.html">traits</a> conferred by the Active Camo powerup.</dd>
+<dt>Yellow Powerup Traits</dt>
+<dd>Edit the <a href="editor/main_window_ff/traits.html">traits</a> conferred by the Custom Powerup.</dd>
+<dt><a href="editor/main_window_ff/options-loadout.html">Tier 2 and 3 Loadouts</a></dt>
+<dd>Edit settings for loadouts.</dd>
+</dl>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

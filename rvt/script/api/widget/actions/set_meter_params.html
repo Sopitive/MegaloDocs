@@ -2,89 +2,72 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      
-      <title>widget.set_meter_params | RVT</title>
+      <title>widget.set_meter_params | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
       <base href="../../../../" />
-      
    </head>
    <body>
-      <nav id="sidebar">
-         <ul>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="script/api/index.html">Script API reference</a></li>
-            <hr />
-            <li data-disallow-collapse>
-               <a href="script/api/widget.html">HUD Widget</a>
-               <ul>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Properties</a>
-                     <ul>
-                        
-                     </ul>
-                  </li>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Accessors</a>
-                     <ul>
-                        
-                     </ul>
-                  </li>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Member conditions</a>
-                     <ul>
-                        
-                     </ul>
-                  </li>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Member actions</a>
-                     <ul>
-                        <li><a href="script/api/widget/actions/set_icon.html">set_icon</a></li>
-<li><a href="script/api/widget/actions/set_meter_params.html">set_meter_params</a></li>
-<li><a href="script/api/widget/actions/set_text.html">set_text</a></li>
-<li><a href="script/api/widget/actions/set_value_text.html">set_value_text</a></li>
-<li><a href="script/api/widget/actions/set_visibility.html">set_visibility</a></li>
-
-                     </ul>
-                  </li>
-               </ul>
-            </li>
-         </ul>
-      </nav>
-      <main>
-         <header><h1>widget.set_meter_params</h1></header>
-
-               <p>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<header><h1>widget.set_meter_params</h1></header>
+<p>
                   This function sets whether a HUD widget displays as a meter (with its text 
                   serving as a label) and if so, the displayed value of the meter.
                </p>
-            
 <h2>Arguments</h2>
 <dl>
-   <dt>type</dt>
-      <dd>
-                  <p>One of the following types:</p>
-                  <dl>
-                     <dt>none</dt>
-                        <dd>Does not display a meter.</dd>
-                     <dt>timer</dt>
-                        <dd>Displays the value of a timer relative to its initial value.</dd>
-                     <dt>number</dt>
-                        <dd>Displays a fraction..</dd>
-                  </dl>
-                  <p>
+<dt>type</dt>
+<dd>
+<p>One of the following types:</p>
+<dl>
+<dt>none</dt>
+<dd>Does not display a meter.</dd>
+<dt>timer</dt>
+<dd>Displays the value of a timer relative to its initial value.</dd>
+<dt>number</dt>
+<dd>Displays a fraction..</dd>
+</dl>
+<p>
                      If you specify <var>timer</var>, then you must pass a timer variable as an 
                      additional argument. If you specify <var>number</var>, then you must pass 
                      two number variables (a current value and a maximum) as additional arguments.
                   </p>
-               </dd>
+</dd>
 </dl>
 <h2>Example</h2>
-<pre>
+<pre><code>
 script_widget[0].set_meter_params(none)
 script_widget[1].set_meter_params(timer, global.timer[0])
-script_widget[2].set_meter_params(number, 50, 100)</pre>
+script_widget[2].set_meter_params(number, 50, 100)</code></pre>
 
       </main>
-      <script src="resources/sidebar.js"></script>
-      
+      <script src="/JS/sidebar.js"></script>
    </body>
 </html>

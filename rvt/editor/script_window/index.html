@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Script Editor | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>Script Editor</h1>
+<p>
+         The <b>script editor window</b> can be used to modify a gametype's script. The 
+         script determines a gametype's behavior. Gametype code isn't built into the game 
+         engine anymore; with <i>Halo: Reach</i>, each game variant includes its own copy 
+         of a gametype's code, and that code can be modified to produce entirely new game 
+         modes.
+      </p>
+<img src="editor/script_window/meta-strings.png"/>
+<p>
+         The pane on the left can be used to select a page to view. The bar on the bottom 
+         shows how much of the available space in the game variant has been used up; it's 
+         a good way to tell at a glance how "full" a file is.
+      </p>
+<p>
+         The pages in this window are:
+      </p>
+<dl>
+<dt><a href="editor/script_window/meta-strings.html">Metadata Strings</a></dt>
+<dd>Edit strings used for localizing gametype categories.</dd>
+<dt><a href="editor/script_window/string-table.html">All Other Strings</a></dt>
+<dd>Edit strings used by the gametype data and script.</dd>
+<dt><a href="editor/script_window/forge-labels.html">Forge Labels</a></dt>
+<dd>Edit the gametype's Forge labels.</dd>
+<dt><a href="editor/script_window/map-permissions.html">Map Permissions</a></dt>
+<dd>Control what maps the player can play this gametype on.</dd>
+<dt><a href="editor/script_window/player-rating-parameters.html">Player Rating Parameters</a></dt>
+<dd>Control how this gametype interacts with Bungie's Arena rating system.</dd>
+<dt><a href="editor/script_window/required-object-types.html">Required Object Types</a></dt>
+<dd>Specify which object types a map must define for this gametype.</dd>
+<dt><a href="editor/script_window/script-options.html">Scripted Options</a></dt>
+<dd>Define which Custom Game options this gametype offers.</dd>
+<dt><a href="editor/script_window/script-traits.html">Scripted Player Traits</a></dt>
+<dd>Define which player traits this gametype offers.</dd>
+<dt><a href="editor/script_window/script-stats.html">Scripted Stats</a></dt>
+<dd>Define scripted scoreboard stats for this gametype.</dd>
+<dt><a href="editor/script_window/script-widgets.html">Scripted HUD Widgets</a></dt>
+<dd>Define scripted HUD widgets for this gametype.</dd>
+<dt><a href="editor/script_window/gametype-code.html">Gametype Code</a></dt>
+<dd>The compiler and decompiler. This is where the magic happens.</dd>
+</dl>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Forge Labels | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>Forge Labels</h1>
+<p>
+         The <b>Forge labels</b> page allows you to edit the Forge labels defined 
+         for a game variant. You can add labels, reorder them, and delete any labels 
+         not in use by the gametype script.
+      </p>
+<img src="editor/script_window/forge-labels.png"/>
+<p>
+         The fields available to edit for each Forge label are as follows:
+      </p>
+<dl>
+<dt>Name</dt>
+<dd>The name to use for a Forge label; the label matches all objects 
+            with this label assigned. This is optional; a label with no name string 
+            can be used internally by the gametype script to rapidly access all 
+            objects on the map that meet specific criteria.</dd>
+<dt>Object Type</dt>
+<dd>If enabled, the label also matches all objects of this type.</dd>
+<dt>Team</dt>
+<dd>If enabled, the label also matches all objects on this team. This 
+            may not behave the way you expect; for example, in FFA gametypes, it 
+            seems like most or all objects, including projectiles, are on Team 1.</dd>
+<dt>Number</dt>
+<dd>Yet to be determined.</dd>
+<dt>Map Must Have At Least</dt>
+<dd>The minimum number of labeled objects that must exist on the map 
+            in order for this game variant to be considered compatible.</dd>
+</dl>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

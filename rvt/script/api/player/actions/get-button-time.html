@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>player.get_button_time | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<header><h1>player.get_button_time</h1><span class="a-k-a">a.k.a. player.get_button_press_duration</span></header>
+<p>
+                  When called on a player, this function returns the amount of ticks that the player has been holding down a button up to a max of 255 ticks. Returns 0 if the player is not holding down the button.
+               </p>
+<p>This function returns <a href="script/api/number.html">number</a>. Calling this function without storing its return value in a variable is an error.</p>
+<h2>Arguments</h2>
+<dl>
+<dt>button</dt>
+<dd>
+<p>A button -- not a specific hardware button, like Left Bumper, but rather the button to which a given gameplay function is currently mapped.</p>
+<dl>
+<dt>jump</dt>
+<dd>The button used to make the player jump</dd>
+<dt>switch_grenade</dt>
+<dd>The button used to switch grenades between frags/plasmas</dd>
+<dt>switch_weapon</dt>
+<dd>The button used to switch weapons between primary/secondary</dd>
+<dt>context_primary</dt>
+<dd>The button used as the "action" button to interact with objects</dd>
+<dt>melee</dt>
+<dd>The button used to make the player melee</dd>
+<dt>equipment</dt>
+<dd>The button the player uses to activate their armor ability</dd>
+<dt>throw_grenade</dt>
+<dd>The button used to throw a grenade</dd>
+<dt>fire_primary</dt>
+<dd>The button used to fire the primary weapon</dd>
+<dt>crouch</dt>
+<dd>The button used to make the player crouch</dd>
+<dt>scope_zoom</dt>
+<dd>The button used to toggle zooming in/out</dd>
+<dt>night_vision</dt>
+<dd>The button used to toggle night vision</dd>
+<dt>fire_secondary</dt>
+<dd>The button used for vehicle function 1 </dd>
+<dt>fire_tertiary</dt>
+<dd>Appears to always trigger on the "B" button</dd>
+<dt>vehicle_trick</dt>
+<dd>The button used for vehicle function 2 and vehicle function 3</dd>
+</dl></dd>
+</dl>
+<h2>Notes</h2>
+<ul>
+<li><p>
+        This function only appears to do anything when called on the host.
+    </p></li>
+<li><p>
+        This function appears to only work when the player is using a controller.
+    </p></li>
+<li><p>
+        When the player is holding down any button, this function will get the button time regardless of whether the button would normally be used in the current context.
+        For example, pressing the jump button while in a vehicle will still return the amount of time the player has been holding down the jump button.
+    </p></li>
+</ul>
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

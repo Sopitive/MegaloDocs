@@ -1,0 +1,617 @@
+[
+  {
+    "name": "MegaloEdit",
+    "content": [
+      {
+        "title": "Getting Started",
+        "path": "/megaloedit/index.html",
+        "children": null
+      },
+      {
+        "title": "Syntax & Language",
+        "path": "/megaloedit/syntax.html",
+        "children": null
+      },
+      {
+        "title": "Engine Data & Permissions",
+        "path": "/megaloedit/metadata.html",
+        "children": null
+      },
+      {
+        "title": "Gameplay Configuration",
+        "path": "/megaloedit/gameplay.html",
+        "children": null
+      },
+      {
+        "title": "World Interaction",
+        "path": "/megaloedit/world.html",
+        "children": null
+      },
+      {
+        "title": "Interface & Scoring",
+        "path": "/megaloedit/interface.html",
+        "children": null
+      },
+      {
+        "title": "Scripting & Triggers",
+        "path": "/megaloedit/scripting.html",
+        "children": null
+      },
+      {
+        "title": "Actions",
+        "path": "/megaloedit/actions/actions.html",
+        "children": null
+      },
+      {
+        "title": "Conditions",
+        "path": "/megaloedit/conditions.html",
+        "children": null
+      },
+      {
+        "title": "Object Types Reference",
+        "path": "/megaloedit/reference/object-types.html",
+        "children": null
+      },
+      {
+        "title": "API Reference",
+        "path": "/megaloedit/script/api/index.html",
+        "children": [
+          {
+            "title": "Player",
+            "path": "/megaloedit/script/api/player.html",
+            "children": null
+          },
+          {
+            "title": "Object",
+            "path": "/megaloedit/script/api/object.html",
+            "children": null
+          },
+          {
+            "title": "Team",
+            "path": "/megaloedit/script/api/team.html",
+            "children": null
+          },
+          {
+            "title": "Game",
+            "path": "/megaloedit/script/api/game.html",
+            "children": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Reach Variant Tool",
+    "content": [
+      {
+        "title": "Tools",
+        "path": "/rvt/tools.html",
+        "children": null
+      },
+      {
+        "title": "Index",
+        "path": "/rvt/index.html",
+        "children": null
+      },
+      {
+        "title": "Main Window",
+        "path": null,
+        "children": [
+          {
+            "title": "Multiplayer",
+            "path": "/rvt/editor/main_window/index.html",
+            "children": [
+              {
+                "title": "Metadata",
+                "path": "/rvt/editor/main_window/metadata.html",
+                "children": null
+              },
+              {
+                "title": "General Settings",
+                "path": "/rvt/editor/main_window/options-general.html",
+                "children": null
+              },
+              {
+                "title": "Respawn Settings",
+                "path": "/rvt/editor/main_window/options-respawn.html",
+                "children": null
+              },
+              {
+                "title": "Social Settings",
+                "path": "/rvt/editor/main_window/options-social.html",
+                "children": null
+              },
+              {
+                "title": "Map and Game Settings",
+                "path": "/rvt/editor/main_window/options-map.html",
+                "children": null
+              },
+              {
+                "title": "Team Settings",
+                "path": "/rvt/editor/main_window/options-team.html",
+                "children": [
+                  {
+                    "title": "Individual Team Settings",
+                    "path": "/rvt/editor/main_window/options-team-specific.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Loadout Settings",
+                "path": "/rvt/editor/main_window/options-loadout.html",
+                "children": [
+                  {
+                    "title": "Individual Loadout Settings",
+                    "path": "/rvt/editor/main_window/options-loadout-specific.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Script-Specific Settings",
+                "path": "/rvt/editor/main_window/options-megalo.html",
+                "children": null
+              },
+              {
+                "title": "Option Visibility",
+                "path": "/rvt/editor/main_window/option-visibility.html",
+                "children": null
+              },
+              {
+                "title": "Title Update Settings",
+                "path": "/rvt/editor/main_window/tu1.html",
+                "children": null
+              },
+              {
+                "title": "(all player traits)",
+                "path": "/rvt/editor/main_window/traits.html",
+                "children": null
+              },
+              {
+                "title": "Forge Settings",
+                "path": "/rvt/editor/main_window/forge.html",
+                "children": null
+              }
+            ]
+          },
+          {
+            "title": "Firefight",
+            "path": "/rvt/editor/main_window_ff/index.html",
+            "children": [
+              {
+                "title": "Metadata",
+                "path": "/rvt/editor/main_window_ff/metadata.html",
+                "children": null
+              },
+              {
+                "title": "Firefight Settings",
+                "path": "/rvt/editor/main_window_ff/scenario.html",
+                "children": [
+                  {
+                    "title": "Player Lives",
+                    "path": "/rvt/editor/main_window_ff/lives.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Respawn Settings",
+                    "path": "/rvt/editor/main_window_ff/options-respawn.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Round Settings",
+                    "path": "/rvt/editor/main_window_ff/round.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Bonus Wave Settings",
+                    "path": "/rvt/editor/main_window_ff/bonus-wave.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Custom Skulls",
+                    "path": "/rvt/editor/main_window_ff/custom-skull.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Other Settings",
+                "path": null,
+                "children": [
+                  {
+                    "title": "General Settings",
+                    "path": "/rvt/editor/main_window_ff/options-general.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Social Settings",
+                    "path": "/rvt/editor/main_window_ff/options-social.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Team Settings",
+                    "path": "/rvt/editor/main_window_ff/options-team.html",
+                    "children": [
+                      {
+                        "title": "Individual Team Settings",
+                        "path": "/rvt/editor/main_window_ff/options-team-specific.html",
+                        "children": null
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Loadout Settings",
+                    "path": "/rvt/editor/main_window_ff/options-loadout.html",
+                    "children": [
+                      {
+                        "title": "Individual Loadout Settings",
+                        "path": "/rvt/editor/main_window_ff/options-loadout-specific.html",
+                        "children": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "(all player traits)",
+                "path": "/rvt/editor/main_window_ff/traits.html",
+                "children": null
+              },
+              {
+                "title": "(all wave traits)",
+                "path": "/rvt/editor/main_window_ff/traits-wave.html",
+                "children": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Script Window",
+        "path": "/rvt/editor/script_window/index.html",
+        "children": [
+          {
+            "title": "Metadata Strings",
+            "path": "/rvt/editor/script_window/meta-strings.html",
+            "children": null
+          },
+          {
+            "title": "All Other Strings",
+            "path": "/rvt/editor/script_window/string-table.html",
+            "children": [
+              {
+                "title": "Localization",
+                "path": "/rvt/editor/script_window/string-localization.html",
+                "children": null
+              }
+            ]
+          },
+          {
+            "title": "Forge Labels",
+            "path": "/rvt/editor/script_window/forge-labels.html",
+            "children": null
+          },
+          {
+            "title": "Map Permissions",
+            "path": "/rvt/editor/script_window/map-permissions.html",
+            "children": null
+          },
+          {
+            "title": "Player Rating Parameters",
+            "path": "/rvt/editor/script_window/player-rating-parameters.html",
+            "children": null
+          },
+          {
+            "title": "Required Object Types",
+            "path": "/rvt/editor/script_window/required-object-types.html",
+            "children": null
+          },
+          {
+            "title": "Scripted Options",
+            "path": "/rvt/editor/script_window/script-options.html",
+            "children": null
+          },
+          {
+            "title": "Scripted Traits",
+            "path": "/rvt/editor/script_window/script-traits.html",
+            "children": null
+          },
+          {
+            "title": "Scripted Stats",
+            "path": "/rvt/editor/script_window/script-stats.html",
+            "children": null
+          },
+          {
+            "title": "Scripted Widgets",
+            "path": "/rvt/editor/script_window/script-widgets.html",
+            "children": null
+          },
+          {
+            "title": "Gametype Code",
+            "path": "/rvt/editor/script_window/gametype-code.html",
+            "children": null
+          }
+        ]
+      },
+      {
+        "title": "Scripting Language",
+        "path": "/rvt/script/syntax.html",
+        "children": [
+          {
+            "title": "Aliases",
+            "path": "/rvt/script/alias.html",
+            "children": null
+          },
+          {
+            "title": "Events",
+            "path": "/rvt/script/events.html",
+            "children": null
+          },
+          {
+            "title": "For-each-loops",
+            "path": "/rvt/script/for.html",
+            "children": null
+          },
+          {
+            "title": "If-/alt-statements",
+            "path": "/rvt/script/if.html",
+            "children": null
+          },
+          {
+            "title": "Operators",
+            "path": "/rvt/script/operators.html",
+            "children": null
+          },
+          {
+            "title": "Special string characters",
+            "path": "/rvt/script/string-special-chars.html",
+            "children": null
+          },
+          {
+            "title": "User-defined enums",
+            "path": "/rvt/script/enum.html",
+            "children": null
+          },
+          {
+            "title": "User-defined functions",
+            "path": "/rvt/script/function.html",
+            "children": null
+          },
+          {
+            "title": "Useful code snippets",
+            "path": "/rvt/script/snippets.html",
+            "children": null
+          },
+          {
+            "title": "Variable declarations",
+            "path": "/rvt/script/declare.html",
+            "children": null
+          },
+          {
+            "title": "Best practices",
+            "path": "/rvt/script/best-practices.html",
+            "children": null
+          },
+          {
+            "title": "Advanced",
+            "path": null,
+            "children": [
+              {
+                "title": "Scripted object count limit",
+                "path": "/rvt/script/scripted-object-count-limit.html",
+                "children": null
+              },
+              {
+                "title": "Inlined triggers",
+                "path": "/rvt/script/inline.html",
+                "children": null
+              },
+              {
+                "title": "Under the hood",
+                "path": "/rvt/script/under-the-hood.html",
+                "children": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Script API reference",
+        "path": "/rvt/script/api/index.html",
+        "children": [
+          {
+            "title": "Namespaces",
+            "path": null,
+            "children": [
+              {
+                "title": "Content not in any namespace",
+                "path": "/rvt/script/api/ns_unnamed.html",
+                "children": null
+              },
+              {
+                "title": "enums",
+                "path": "/rvt/script/api/ns_enums.html",
+                "children": null
+              },
+              {
+                "title": "game",
+                "path": "/rvt/script/api/ns_game.html",
+                "children": null
+              },
+              {
+                "title": "global",
+                "path": "/rvt/script/api/ns_global.html",
+                "children": null
+              },
+              {
+                "title": "temporaries",
+                "path": "/rvt/script/api/ns_temporaries.html",
+                "children": null
+              }
+            ]
+          },
+          {
+            "title": "Types",
+            "path": null,
+            "children": [
+              {
+                "title": "Variables",
+                "path": null,
+                "children": [
+                  {
+                    "title": "Number",
+                    "path": "/rvt/script/api/number.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Object",
+                    "path": "/rvt/script/api/object.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Player",
+                    "path": "/rvt/script/api/player.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Team",
+                    "path": "/rvt/script/api/team.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Timer",
+                    "path": "/rvt/script/api/timer.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Misc",
+                "path": null,
+                "children": [
+                  {
+                    "title": "Bool",
+                    "path": "/rvt/script/api/bool.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Engine Icon",
+                    "path": "/rvt/script/api/engine-icon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Forge Label",
+                    "path": "/rvt/script/api/forge-label.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Format String",
+                    "path": "/rvt/script/api/format-string.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Incident",
+                    "path": "/rvt/script/api/incident.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Object Type",
+                    "path": "/rvt/script/api/object-type.html",
+                    "children": null
+                  },
+                  {
+                    "title": "money",
+                    "path": "/rvt/script/api/player/properties/money.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Player Set",
+                    "path": "/rvt/script/api/player-set.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Player Traits",
+                    "path": "/rvt/script/api/player-traits.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Sound",
+                    "path": "/rvt/script/api/sound.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Variant ID",
+                    "path": "/rvt/script/api/variant-string-id.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Waypoint Icon",
+                    "path": "/rvt/script/api/waypoint-icon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Widget",
+                    "path": "/rvt/script/api/widget.html",
+                    "children": null
+                  },
+                  {
+                    "title": "Widget Icon",
+                    "path": "/rvt/script/api/widget-icon.html",
+                    "children": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Concepts",
+        "path": null,
+        "children": [
+          {
+            "title": "Bipeds and items",
+            "path": "/rvt/concepts/bipeds-and-items.html",
+            "children": null
+          },
+          {
+            "title": "Coordinates",
+            "path": "/rvt/concepts/coordinates.html",
+            "children": null
+          },
+          {
+            "title": "Firefight",
+            "path": "/rvt/concepts/firefight.html",
+            "children": null
+          },
+          {
+            "title": "Commented Game Variants",
+            "path": "/rvt/concepts/game-variants.html",
+            "children": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Universal Gametype Editor",
+    "content": [
+      {
+        "title": "Under Development",
+        "path": "#",
+        "children": null
+      }
+    ]
+  },
+  {
+    "name": "Megalograph",
+    "content": [
+      {
+        "title": "Coming Soon",
+        "path": "#",
+        "children": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Scripted Stats | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>Scripted Stats</h1>
+<p>
+         The <b>scripted stats</b> page allows you to define custom scoreboard stats 
+         that can be used by the gametype script. Note that as of this writing, Halo: 
+         The Master Chief Collection does not display these stats anywhere.
+      </p>
+<img src="editor/script_window/script-stats.png"/>
+<p>
+         The fields available to edit for each set of player traits are as follows:
+      </p>
+<dl>
+<dt>Name</dt>
+<dd>The <a href="editor/script_window/string-table.html">string</a> used for the traits name.</dd>
+<dt>Format</dt>
+<dd>Controls how the stat's value is displayed on the scoreboard.</dd>
+<dt>Sort Order</dt>
+<dd>Determines whether and how players are sorted within the scoreboard 
+            by this stat's value.</dd>
+<dt>Group Players by Team</dt>
+<dd>Unknown.</dd>
+</dl>
+<p>
+         Scripted stats can be used to show gametype-specific statistics on the 
+         scoreboard, such as the number of times a player has armed and detonated a 
+         bomb in Assault. They are also a useful means of persisting data across 
+         rounds, so that a script can know what happened in the previous round(s).
+      </p>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

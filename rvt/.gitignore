@@ -1,0 +1,15 @@
+# Don't upload Halo: Reach game content (anymore...)
+*.bin
+*.mvar
+
+# ...unless it's custom and we're uploading it for demonstrative purposes.
+!/other/*/*.bin
+!/other/*/*.mvar
+
+# Don't upload compiled/linked/etc. files
+*.obj
+
+# Don't upload the program's generated INI files
+*.ini
+*.ini.tmp
+*.ini.bak

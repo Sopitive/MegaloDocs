@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Scripted HUD Widgets | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>Scripted HUD Widgets</h1>
+<p>
+         The <b>scripted HUD widgets</b> page allows you to define script-accessible 
+         HUD widgets that can be displayed and customized by the script.
+      </p>
+<img src="editor/script_window/script-widgets.png"/>
+<p>
+         The only attribute of a HUD widget that you can customize here is its position 
+         on-screen; the text and other visuals are set by the script code and can even 
+         be changed on the fly (though they have to be the same for all players). If 
+         two HUD widgets have the same position, they will not overlap; they will be 
+         positioned adjacent to each other in an intelligent fashion. However, some 
+         widget positions will overlap standard HUD elements such as the shield bar 
+         or motion tracker. Additionally, if a gametype tries to display more than two 
+         widgets to the same player at the same position, only two of them will actually 
+         be shown by the game, preferring ones earlier in the widget list.
+      </p>
+<p>
+         Most of the page is taken up by an image which displays where the HUD widget 
+         will appear. This preview only shows the selected widget, and it assumes that 
+         only the selected widget is showing.
+      </p>
+<p>
+         Note that the bottom-right widget position is only suitable for "meter" widgets 
+         — that is, those which use the "set_meter_params" function. Widgets in 
+         this position can display icons and meters, but not any text. The widget will 
+         appear below the hardcoded scoring UI.
+      </p>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

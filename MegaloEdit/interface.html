@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Interface & Scoring | MegaloEdit Documentation</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         <header><h1>Interface & Scoring</h1></header>
+         <p>Learn how to add elements to the player's HUD and configure how scores are tracked and displayed.</p>
+         
+         <h2>HUD Widgets</h2>
+         <p>HUD widgets add text, icons, and meters to specific locations on a player's screen. You can have up to four widgets per gametype. Note that while Reach supports many locations, H4 & H2 display all widgets in the <code>low_center</code> location.</p>
+         <pre><code>hud_widgets
+    widget_name_1 low_center
+    widget_name_2 top_left
+    widget_name_3 high_right
+    widget_name_4 bottom_center
+end</code></pre>
+
+         <h2>Game Stats</h2>
+         <p>Game stats are used to track and display player performance. Note that the MCC does not support displaying custom stats in the post-game after-action report, but they still influence player position on the scoreboard.</p>
+         <pre><code>game_stats
+    stat_name1 number "Kills" none 1 ; positive sorting
+    stat_name2 percentage "Accuracy" none 0
+end</code></pre>
+
+         <h2>Player Ratings</h2>
+         <p>Player ratings are used to calculate a player's performance relative to others. This was extensively used for the original Halo: Reach Arena playlists.</p>
+         <pre><code>player_rating
+    show_in_scoreboard true
+    kill_weight 1
+    assist_weight 0.5
+    betrayal_weight 1
+    death_weight 0.5
+    base_value 1000
+    range 1000
+end</code></pre>
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Gameplay Configuration | MegaloEdit Documentation</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         <header><h1>Gameplay Configuration</h1></header>
+         <p>Learn how to define teams, loadouts, and general game options for your gametype.</p>
+         
+         <h2>Teams</h2>
+         <p>You can define up to eight teams, including their model (Spartan/Elite), names, designators, and colors.</p>
+         <pre><code>teams
+    model spartan ; Set the player species of all teams  
+    team ; Index 0
+        name "Defenders"
+        designator defenders
+        fireteam_count 2 
+        color 255 0 0 ; Red
+        model elite ; Override specific team model
+    end
+end</code></pre>
+         <p>Setting the designator to <code>none</code> will make everyone on that team an enemy to everyone else (even each other).</p>
+
+         <h2>Loadouts</h2>
+         <p>MegaloEdit allows you to create custom loadouts and loadout palettes. Note that the number of referenceable loadouts is limited (typically to 32).</p>
+         <pre><code>loadout my_loadout
+    name loadout_name_noble1 ; Predefined options
+    primary_weapon spike_rifle
+    grenades 4 each ; Frag, plasma, each
+end
+
+loadout_palette my_palette
+    item my_loadout
+end</code></pre>
+
+         <h2>Game Options</h2>
+         <p>Game options define how the match is played, from score limits and round times to respawn penalties.</p>
+         <pre><code>game_options
+    override score_to_win_round 0 ; Unlimited
+    override fire_teams_enabled true
+    override respawn_time 5 ; Total respawn time in seconds
+    
+    ; Custom options for players
+    option custom_option
+        "Game Speed"
+        "Sets the movement speed bonus."
+        0 ; Default
+        0 "Normal" ""
+        1 "Double" ""
+    end
+end</code></pre>
+         <p>Using <code>lock</code> or <code>hide</code> before an override prevents players from changing it in the pre-game menu.</p>
+
+         <h2>Player Traits</h2>
+         <p>Player traits modify the physical attributes of players, such as their movement speed, gravity, and weapon modifiers.</p>
+         <pre><code>override base_player_traits
+    damage_resistance invulnerable
+    speed 150
+    gravity 140
+    infinite_ammo true
+end
+
+; Custom traits to be applied later in scripts
+player_traits custom_trait
+    "Berserker"
+    "Increased speed but vulnerable."
+    speed 200
+    damage_resistance 10
+end</code></pre>
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

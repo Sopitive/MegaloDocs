@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Object Types Reference | MegaloEdit Documentation</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+      <style>
+         .object-tag { cursor: pointer !important; }
+         .object-tag.active { border-color: var(--accent-light); background-color: rgba(255, 255, 255, 0.1); transform: scale(1.05); }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         <header><h1>Object Types Reference</h1></header>
+         <p>Select an object type from the catalog below to view its description and engine details.</p>
+         
+         <div class="grid-layout">
+            <div class="tag-catalog">
+               <h2>Characters & Species</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="spartan">spartan</span>
+                  <span class="object-tag" data-name="elite">elite</span>
+                  <span class="object-tag" data-name="monitor">monitor</span>
+               </div>
+
+               <h2>Core Gameplay Objects</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="flag">flag</span>
+                  <span class="object-tag" data-name="bomb">bomb</span>
+                  <span class="object-tag" data-name="ball">ball</span>
+                  <span class="object-tag" data-name="area">area</span>
+                  <span class="object-tag" data-name="stand">stand</span>
+                  <span class="object-tag" data-name="destination">destination</span>
+                  <span class="object-tag" data-name="initial_spawn_point">initial_spawn_point</span>
+                  <span class="object-tag" data-name="respawn_zone">respawn_zone</span>
+                  <span class="object-tag" data-name="ctf_flag_spawn_point">ctf_flag_spawn_point</span>
+                  <span class="object-tag" data-name="oddball_ball_spawn_point">oddball_ball_spawn_point</span>
+               </div>
+
+               <h2>Vehicles</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="warthog">warthog</span>
+                  <span class="object-tag" data-name="ghost">ghost</span>
+                  <span class="object-tag" data-name="scorpion">scorpion</span>
+                  <span class="object-tag" data-name="wraith">wraith</span>
+                  <span class="object-tag" data-name="banshee">banshee</span>
+                  <span class="object-tag" data-name="mongoose">mongoose</span>
+                  <span class="object-tag" data-name="chopper">chopper</span>
+                  <span class="object-tag" data-name="revenant">revenant</span>
+                  <span class="object-tag" data-name="falcon">falcon</span>
+                  <span class="object-tag" data-name="sabre">sabre</span>
+                  <span class="object-tag" data-name="phantom">phantom</span>
+                  <span class="object-tag" data-name="pelican">pelican</span>
+               </div>
+
+               <h2>Utility & Interactions</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="fusion_coil">fusion_coil</span>
+                  <span class="object-tag" data-name="health_station">health_station</span>
+                  <span class="object-tag" data-name="wall_switch">wall_switch</span>
+                  <span class="object-tag" data-name="teleporter_sender">teleporter_sender</span>
+                  <span class="object-tag" data-name="teleporter_reciever">teleporter_reciever</span>
+                  <span class="object-tag" data-name="soccer_ball">soccer_ball</span>
+                  <span class="object-tag" data-name="golf_ball">golf_ball</span>
+                  <span class="object-tag" data-name="killball">killball</span>
+               </div>
+
+               <h2>Weapons & Equipment</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="dmr">dmr</span>
+                  <span class="object-tag" data-name="assault_rifle">assault_rifle</span>
+                  <span class="object-tag" data-name="magnum">magnum</span>
+                  <span class="object-tag" data-name="shotgun">shotgun</span>
+                  <span class="object-tag" data-name="rocket_launcher">rocket_launcher</span>
+                  <span class="object-tag" data-name="sniper_rifle">sniper_rifle</span>
+                  <span class="object-tag" data-name="sprint_equipment">sprint_equipment</span>
+                  <span class="object-tag" data-name="jet_pack_equipment">jet_pack_equipment</span>
+                  <span class="object-tag" data-name="active_camo_equipment">active_camo_equipment</span>
+               </div>
+
+               <h2>Halo 2 Anniversary (Weapons & Vehicles)</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="battle_rifle">battle_rifle</span>
+                  <span class="object-tag" data-name="smg">smg</span>
+                  <span class="object-tag" data-name="smg_suppressed">smg_suppressed</span>
+                  <span class="object-tag" data-name="gungoose">gungoose</span>
+                  <span class="object-tag" data-name="covenant_carbine">covenant_carbine</span>
+                  <span class="object-tag" data-name="brute_plasma">brute_plasma</span>
+                  <span class="object-tag" data-name="sentinel_beam">sentinel_beam</span>
+                  <span class="object-tag" data-name="fuel_rod_cannon">fuel_rod_cannon</span>
+                  <span class="object-tag" data-name="h2a_banshee_heretic">h2a_banshee_heretic</span>
+                  <span class="object-tag" data-name="h2a_warthog_civ">h2a_warthog_civ</span>
+               </div>
+
+               <h2>H2A Gameplay, FX & Objectives</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="h2a_active_camo">h2a_active_camo</span>
+                  <span class="object-tag" data-name="h2a_overshield">h2a_overshield</span>
+                  <span class="object-tag" data-name="h2a_speedboost">h2a_speedboost</span>
+                  <span class="object-tag" data-name="h2a_oddball_ricochet">h2a_oddball_ricochet</span>
+                  <span class="object-tag" data-name="h2a_ricochet_screen_flash">h2a_ricochet_screen_flash</span>
+                  <span class="object-tag" data-name="odd_confetti">odd_confetti</span>
+                  <span class="object-tag" data-name="odd_confetti_ricochet">odd_confetti_ricochet</span>
+                  <span class="object-tag" data-name="juggernaut">juggernaut</span>
+                  <span class="object-tag" data-name="h2a_assault_bomb">h2a_assault_bomb</span>
+                  <span class="object-tag" data-name="h2a_koth_hill">h2a_koth_hill</span>
+                  <span class="object-tag" data-name="h2a_territory_static">h2a_territory_static</span>
+                  <span class="object-tag" data-name="h2a_generic_goal">h2a_generic_goal</span>
+               </div>
+
+               <h2>H2A Interactables & Environments</h2>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="on_switch">on_switch</span>
+                  <span class="object-tag" data-name="off_switch">off_switch</span>
+                  <span class="object-tag" data-name="toggle_switch">toggle_switch</span>
+                  <span class="object-tag" data-name="timed_on_switch">timed_on_switch</span>
+                  <span class="object-tag" data-name="damage_on_switch">damage_on_switch</span>
+                  <span class="object-tag" data-name="h2a_lockout_steamvent">h2a_lockout_steamvent</span>
+                  <span class="object-tag" data-name="h2a_sancuary_waterfall">h2a_sancuary_waterfall</span>
+                  <span class="object-tag" data-name="mp_ca_ascension_dome_shield">mp_ca_ascension_dome_shield</span>
+                  <span class="object-tag" data-name="shutter">shutter</span>
+               </div>
+
+               <h2>Halo 4 / Ordnance (Leaked IDs)</h2>
+               <p style="font-size:0.8rem; opacity:0.7;">These IDs appear in H2A metadata due to shared engine lineage with Halo 4.</p>
+               <div class="tag-container">
+                  <span class="object-tag" data-name="ord_weap_storm_binary_rifle">ord_weap_storm_binary_rifle</span>
+                  <span class="object-tag" data-name="ord_weap_storm_light_rifle">ord_weap_storm_light_rifle</span>
+                  <span class="object-tag" data-name="ord_weap_storm_rail_gun">ord_weap_storm_rail_gun</span>
+                  <span class="object-tag" data-name="ord_weap_storm_bolt_shot">ord_weap_storm_bolt_shot</span>
+                  <span class="object-tag" data-name="ord_weap_storm_sticky_grenade_launcher">ord_weap_storm_sticky_grenade_launcher</span>
+               </div>
+            </div>
+
+            <aside class="detail-panel" id="object-detail">
+               <div class="placeholder">Select an object type to view details.</div>
+            </aside>
+         </div>
+      </main>
+
+      <script>
+         const objectTable = {
+   "spartan": {
+      "title": "Spartan Biped",
+      "desc": "A Spartan biped. Use a variant ID to control the armor permutation.",
+      "syntax": "action create_object \"spartan\" at ..."
+   },
+   "elite": {
+      "title": "Elite Biped",
+      "desc": "An Elite biped. Use a variant ID to control the armor permutation.",
+      "syntax": "action create_object \"elite\" at ..."
+   },
+   "monitor": {
+      "title": "Monitor Biped",
+      "desc": "A Monitor biped. It spawns with a default weapon that behaves exactly like a Focus Rifle, but is invisible.",
+      "syntax": "action create_object \"monitor\" at ..."
+   },
+   "flag": {
+      "title": "Flag",
+      "desc": "A flag. It can be picked up by a player, carried, and used as a melee weapon.",
+      "syntax": "action create_object \"flag\" at ..."
+   },
+   "bomb": {
+      "title": "Bomb",
+      "desc": "A UNSC bomb. It can be picked up by a player, carried, and used as a melee weapon.",
+      "syntax": "action create_object \"bomb\" at ..."
+   },
+   "skull": {
+      "title": "Skull",
+      "desc": "A skull. It can be picked up by a player, carried, and used as a melee weapon.",
+      "syntax": "action create_object \"skull\" at ..."
+   },
+   "hill_marker": {
+      "title": "Hill Marker",
+      "desc": "An invisible hill marker, of the same variety as those placeable in Forge.",
+      "syntax": "action create_object \"hill_marker\" at ..."
+   },
+   "flag_stand": {
+      "title": "Flag Stand",
+      "desc": "A flag stand. It is not solid.",
+      "syntax": "action create_object \"flag_stand\" at ..."
+   },
+   "capture_plate": {
+      "title": "Capture Plate",
+      "desc": "A thick, olive drab plate of metal. It is not solid. It is typically used as a spawn or arming point for bombs.",
+      "syntax": "action create_object \"capture_plate\" at ..."
+   },
+   "frag_grenade": {
+      "title": "Frag Grenade",
+      "desc": "A fragmentation grenade that detonates shortly after bouncing off of a single surface.",
+      "syntax": "action create_object \"frag_grenade\" at ..."
+   },
+   "plasma_grenade": {
+      "title": "Plasma Grenade",
+      "desc": "A plasma grenade that sticks to targets.",
+      "syntax": "action create_object \"plasma_grenade\" at ..."
+   },
+   "spike_grenade": {
+      "title": "Spike Grenade",
+      "desc": "This value is not used by the engine and will not spawn or match any object. A development leftover from Halo 3: a spike grenade similar in design to a Stielhandgranate, which sticks to targets when thrown and unleashes a hail of spikes when detonating.",
+      "syntax": "action create_object \"spike_grenade\" at ..."
+   },
+   "firebomb_grenade": {
+      "title": "Firebomb Grenade",
+      "desc": "This value is not used by the engine and will not spawn or match any object. A development leftover from Halo 3: a firebomb which shatters upon impact and ignites the ground at the impact site.",
+      "syntax": "action create_object \"firebomb_grenade\" at ..."
+   },
+   "dmr": {
+      "title": "DMR",
+      "desc": "A designated marksman rifle: the main precision weapon in Halo: Reach. Headshot-capable, with a scope for long-range combat and a fire rate appropriate for medium-range combat. It can also damage vehicles, though at the cost of a large amount of ammo.",
+      "syntax": "action create_object \"dmr\" at ..."
+   },
+   "assault_rifle": {
+      "title": "Assault Rifle",
+      "desc": "A fully-automatic assault rifle.",
+      "syntax": "action create_object \"assault_rifle\" at ..."
+   },
+   "plasma_pistol": {
+      "title": "Plasma Pistol",
+      "desc": "A small Covenant weapon which fires green plasma bolts. It can be charged up to fire a very large plasma bolt accompanied by an EMP that disables vehicles and drains player shields.",
+      "syntax": "action create_object \"plasma_pistol\" at ..."
+   },
+   "spiker": {
+      "title": "Spiker",
+      "desc": "An automatic weapon introduced in Halo 3, created by the Brutes. It fires spikes that arc over a short distance due to gravity.",
+      "syntax": "action create_object \"spiker\" at ..."
+   },
+   "needle_rifle": {
+      "title": "Needle Rifle",
+      "desc": "The Covenant counterpart to the DMR. Needle Rifles are capable of triggering deadly 'supercombine' explosions if three shots hit an unshielded target.",
+      "syntax": "action create_object \"needle_rifle\" at ..."
+   },
+   "plasma_repeater": {
+      "title": "Plasma Repeater",
+      "desc": "The Covenant counterpart to the Assault Rifle. Unlike most Covenant weapons, the Plasma Repeater's cooldown can be initiated manually.",
+      "syntax": "action create_object \"plasma_repeater\" at ..."
+   },
+   "energy_sword": {
+      "title": "Energy Sword",
+      "desc": "A Covenant melee weapon which generates a blade made of plasma. Standard and reliable.",
+      "syntax": "action create_object \"energy_sword\" at ..."
+   },
+   "magnum": {
+      "title": "Magnum",
+      "desc": "A large pistol designed for use by Spartans. It has a relatively fast fire rate compared to its Halo 3 counterpart, and it has a scope.",
+      "syntax": "action create_object \"magnum\" at ..."
+   },
+   "needler": {
+      "title": "Needler",
+      "desc": "A Covenant weapon which fires a series of needles that home in on their target.",
+      "syntax": "action create_object \"needler\" at ..."
+   },
+   "plasma_rifle": {
+      "title": "Plasma Rifle",
+      "desc": "A fully-automatic Covenant weapon which fires plasma bolts.",
+      "syntax": "action create_object \"plasma_rifle\" at ..."
+   },
+   "rocket_launcher": {
+      "title": "Rocket Launcher",
+      "desc": "A rocket launcher. It can load up to two rockets at a time.",
+      "syntax": "action create_object \"rocket_launcher\" at ..."
+   },
+   "shotgun": {
+      "title": "Shotgun",
+      "desc": "A standard issue human shotgun.",
+      "syntax": "action create_object \"shotgun\" at ..."
+   },
+   "sniper_rifle": {
+      "title": "Sniper Rifle",
+      "desc": "A human sniper rifle. It has two levels of zoom, and can load four rounds at a time.",
+      "syntax": "action create_object \"sniper_rifle\" at ..."
+   },
+   "spartan_laser": {
+      "title": "Spartan Laser",
+      "desc": "A human weapon: a massive particle beam cannon which can fire four rounds. It has a long charge-up time.",
+      "syntax": "action create_object \"spartan_laser\" at ..."
+   },
+   "gravity_hammer": {
+      "title": "Gravity Hammer",
+      "desc": "A Covenant melee weapon which generates a powerful physics impulse when swung.",
+      "syntax": "action create_object \"gravity_hammer\" at ..."
+   },
+   "warthog": {
+      "title": "Warthog",
+      "desc": "A Warthog. Use a variant ID to select a specific variety of Warthog to spawn.",
+      "syntax": "action create_object \"warthog\" at ..."
+   },
+   "ghost": {
+      "title": "Ghost",
+      "desc": "A single-occupant Covenant vehicle capable of strafing and rapid boosting. It has two mounted plasma cannons.",
+      "syntax": "action create_object \"ghost\" at ..."
+   },
+   "scorpion": {
+      "title": "Scorpion",
+      "desc": "A tank, with a main cannon operable by the driver and an anti-infantry chaingun operable by a second occupant.",
+      "syntax": "action create_object \"scorpion\" at ..."
+   },
+   "wraith": {
+      "title": "Wraith",
+      "desc": "A Covenant tank, with a mortar launcher operable by the driver and an anti-infantry plasma turret operable by a second occupant.",
+      "syntax": "action create_object \"wraith\" at ..."
+   },
+   "banshee": {
+      "title": "Banshee",
+      "desc": "A single-occupant Covenant air vehicle equipped with a plasma cannon and a fuel rod bomb launcher.",
+      "syntax": "action create_object \"banshee\" at ..."
+   },
+   "mongoose": {
+      "title": "Mongoose",
+      "desc": "A two-seater ATV with no weapons.",
+      "syntax": "action create_object \"mongoose\" at ..."
+   },
+   "falcon": {
+      "title": "Falcon",
+      "desc": "A human air vehicle with two door guns operable by passengers.",
+      "syntax": "action create_object \"falcon\" at ..."
+   },
+   "sabre": {
+      "title": "Sabre",
+      "desc": "An UNSC space vehicle capable of housing a single occupant. Armed with a chaingun and lock-on missiles.",
+      "syntax": "action create_object \"sabre\" at ..."
+   },
+   "sprint_equipment": {
+      "title": "Sprint",
+      "desc": "An Armor Ability that allows its user to sprint forward for short periods of time.",
+      "syntax": "action create_object \"sprint_equipment\" at ..."
+   },
+   "jet_pack_equipment": {
+      "title": "Jetpack",
+      "desc": "An Armor Ability that allows its user to hover upwards for short periods of time.",
+      "syntax": "action create_object \"jet_pack_equipment\" at ..."
+   },
+   "armor_lock_equipment": {
+      "title": "Armor Lock",
+      "desc": "An Armor Ability that allows players to become completely invincible to all damage for several seconds.",
+      "syntax": "action create_object \"armor_lock_equipment\" at ..."
+   },
+   "active_camo_equipment": {
+      "title": "Active Camo",
+      "desc": "An Armor Ability that allows its user to become invisible for short periods of time.",
+      "syntax": "action create_object \"active_camo_equipment\" at ..."
+   },
+   "revenant": {
+      "title": "Revenant",
+      "desc": "A Covenant vehicle that can move like a Ghost, but has a miniaturized mortar launcher and a passenger seat.",
+      "syntax": "action create_object \"revenant\" at ..."
+   },
+   "pickup_truck": {
+      "title": "Pickup Truck",
+      "desc": "A truck with two front seats and a large truck bed. Commonly found in human environments.",
+      "syntax": "action create_object \"pickup_truck\" at ..."
+   },
+   "focus_rifle": {
+      "title": "Focus Rifle",
+      "desc": "A Covenant weapon that fires a weak particle beam.",
+      "syntax": "action create_object \"focus_rifle\" at ..."
+   },
+   "respawn_zone": {
+      "title": "Respawn Zone",
+      "desc": "A respawn zone marker, of the same variety as those placeable in Forge.",
+      "syntax": "action create_object \"respawn_zone\" at ..."
+   },
+   "plasma_launcher": {
+      "title": "Plasma Launcher",
+      "desc": "A Covenant weapon which can lock onto targets and fire up to four armed plasma grenades.",
+      "syntax": "action create_object \"plasma_launcher\" at ..."
+   },
+   "fusion_coil": {
+      "title": "Fusion Coil",
+      "desc": "A small human power source that is highly explosive and detonates upon receiving damage.",
+      "syntax": "action create_object \"fusion_coil\" at ..."
+   },
+   "initial_spawn_point": {
+      "title": "Initial Spawn Point",
+      "desc": "A respawn point that is only used to spawn players in for the first time, at the start of a round.",
+      "syntax": "action create_object \"initial_spawn_point\" at ..."
+   },
+   "health_station": {
+      "title": "Health Pack",
+      "desc": "A fixed or deployable station that restores health to nearby players.",
+      "syntax": "action create_object \"health_station\" at ..."
+   },
+   "soccer_ball": {
+      "title": "Soccer Ball",
+      "desc": "A giant soccer ball, of the same variety as those placeable in Forge.",
+      "syntax": "action create_object \"soccer_ball\" at ..."
+   },
+   "golf_ball": {
+      "title": "Golf Ball",
+      "desc": "A giant golf ball, of the same variety as those placeable in Forge.",
+      "syntax": "action create_object \"golf_ball\" at ..."
+   },
+   "dice": {
+      "title": "Dice",
+      "desc": "A giant six-sided die, of the same variety as those placeable in Forge.",
+      "syntax": "action create_object \"dice\" at ..."
+   },
+   "concussion_rifle": {
+      "title": "Concussion Rifle",
+      "desc": "A Covenant weapon similar to the Brute Shot; it does less damage but has a greater physics impulse.",
+      "syntax": "action create_object \"concussion_rifle\" at ..."
+   },
+   "grenade_launcher": {
+      "title": "Grenade Launcher",
+      "desc": "A human weapon that fires grenades. Holding the trigger allows for delayed detonation.",
+      "syntax": "action create_object \"grenade_launcher\" at ..."
+   },
+   "hologram_equipment": {
+      "title": "Hologram",
+      "desc": "An Armor Ability that sends out an illusory copy of the user.",
+      "syntax": "action create_object \"hologram_equipment\" at ..."
+   },
+   "evade_equipment": {
+      "title": "Evade",
+      "desc": "An Armor Ability that allows the user to perform high-speed dodge rolls.",
+      "syntax": "action create_object \"evade_equipment\" at ..."
+   },
+   "unsc_data_core": {
+      "title": "UNSC Data Core",
+      "desc": "A UNSC data core, typically used as an objective. Can be carried but reduces player speed.",
+      "syntax": "action create_object \"unsc_data_core\" at ..."
+   },
+   "killball": {
+      "title": "Kill Ball",
+      "desc": "A standard Forge kill ball. Instantly destroys any matter that enters its volume.",
+      "syntax": "action create_object \"killball\" at ..."
+   },
+   "phantom_approach": {
+      "title": "Phantom Approach",
+      "desc": "A device machine with the Phantom model, suitable for scripted animation.",
+      "syntax": "action create_object \"phantom_approach\" at ..."
+   },
+   "phantom_scenery": {
+      "title": "Phantom, Scenery",
+      "desc": "A non-animated Phantom visual prop.",
+      "syntax": "action create_object \"phantom_scenery\" at ..."
+   },
+   "pelican_scenery": {
+      "title": "Pelican, Scenery",
+      "desc": "A non-animated Pelican visual prop.",
+      "syntax": "action create_object \"pelican_scenery\" at ..."
+   },
+   "phantom": {
+      "title": "Phantom, Vehicle",
+      "desc": "A drivable Phantom. Cannot be driven by default in an unmodified map due to seat and/or animation limitations.",
+      "syntax": "action create_object \"phantom\" at ..."
+   },
+   "pelican": {
+      "title": "Pelican",
+      "desc": "A pelican device machine suitable for scripted animations. Appears to only be spawnable on Spire by default.",
+      "syntax": "action create_object \"pelican\" at ..."
+   },
+   /* Halo 2 Anniversary Exclusives */
+   "gungoose": {
+      "title": "Gungoose",
+      "desc": "H2A Exclusive: A Mongoose modified with front-mounted light machine guns.",
+      "syntax": "action create_object \"gungoose\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "smg": {
+      "title": "SMG",
+      "desc": "The standard Halo 2 Submachine Gun. Available as a dual-wieldable primary in H2A.",
+      "syntax": "action create_object \"smg\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "smg_suppressed": {
+      "title": "Suppressed SMG",
+      "desc": "H2A Exclusive: A stealth-oriented SMG with a suppressor, reducing muzzle flash and audio signature.",
+      "syntax": "action create_object \"smg_suppressed\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "battle_rifle": {
+      "title": "Battle Rifle",
+      "desc": "The iconic 3-round burst precision rifle. The mainstay of H2A competitive play.",
+      "syntax": "action create_object \"battle_rifle\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "h2a_active_camo": {
+      "title": "Active Camo (Powerup)",
+      "desc": "H2A Exclusive: Strategic powerup that provides near-total invisibility for a limited duration.",
+      "syntax": "action create_object \"h2a_active_camo\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "h2a_lockout_steamvent": {
+      "title": "Lockout Steam Vent",
+      "desc": "H2A Exclusive: A map-specific interactable effect used on the 'Lockdown' remake of Lockout.",
+      "syntax": "action create_object \"h2a_lockout_steamvent\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "h2a_sancuary_waterfall": {
+      "title": "Sanctuary Waterfall",
+      "desc": "H2A Exclusive: Map-specific water effect used on the 'Shrine' remake of Sanctuary.",
+      "syntax": "action create_object \"h2a_sancuary_waterfall\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "h2a_banshee_heretic": {
+      "title": "Heretic Banshee",
+      "desc": "H2A Exclusive: A specialized Banshee variant with unique coloring and performance characteristics.",
+      "syntax": "action create_object \"h2a_banshee_heretic\" at ...",
+      "origin": "H2A / H2AMPEK"
+   },
+   "sentinel_beam": {
+      "title": "Sentinel Beam",
+      "desc": "Covenant/Forerunner energy weapon used primarily by Sentinels. Fires a continuous beam.",
+      "syntax": "action create_object \"sentinel_beam\" at ...",
+      "origin": "H2A / H2AMPEK"
+   }
+};
+
+         document.querySelectorAll('.object-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+               // Update UI
+               document.querySelectorAll('.object-tag').forEach(t => t.classList.remove('active'));
+               tag.classList.add('active');
+
+               const name = tag.getAttribute('data-name');
+               const data = objectTable[name] || {
+                  title: name.charAt(0).toUpperCase() + name.slice(1).replace(/_/g, ' '),
+                  desc: "Documentation for this specific object template is still being finalized. It is a standard engine object.",
+                  syntax: `action create_object "${name}" at ...`,
+                  origin: "Reach / HREK"
+               };
+
+               const panel = document.getElementById('object-detail');
+               panel.innerHTML = `
+                  <h3>${data.title}</h3>
+                  <code>${data.syntax}</code>
+                  <p>${data.desc}</p>
+                  <hr style="border:0; border-top: 1px solid var(--border-color); margin: 20px 0;">
+                  <p style="font-size:0.85rem; color:#888;">
+                     <strong>Engine ID:</strong> ${name}<br>
+                     <strong>Origin:</strong> ${data.origin || "Reach / HREK"}
+                  </p>
+               `;
+            });
+         });
+      </script>
+
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

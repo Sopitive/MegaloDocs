@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>All Other Strings | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>All Other Strings</h1>
+<p>
+         The <b>string table</b> page can be used to edit all of the strings used by a 
+         gametype's script. Each entry consists of several translations into different 
+         languages.
+      </p>
+<img src="editor/script_window/string-table.png"/>
+<p>
+         You can edit an entry, create new entries, or delete entries that aren't in use 
+         by the gametype script. You can also copy the English-language content of the 
+         entry as either normal text, a string literal suitable for use in gametype code, 
+         or an index in the string table.
+      </p>
+<p>
+         Internally, the string table is serialized as a <dfn>buffer</dfn> — a 
+         blob of data consisting of all localizations, back to back, separated with null 
+         terminators. Each localization stores the offset of the start of its string 
+         content; the game loads localizations by copying data from that offset to the 
+         next null terminator.
+      </p>
+<p>
+         The string table is subject to the following limits:
+      </p>
+<ul>
+<li>There can be no more than 112 entries.</li>
+<li>The total size of the buffer, including null terminators at the ends of 
+         strings, cannot be more than 19456 bytes (whether compressed or uncompressed).</li>
+</ul>
+<p>
+         Compared to Bungie's own development tools, ReachVariantTool applies a minor 
+         optimization: if any two localizations are exactly identical, even across 
+         different entries, then they are only written into the buffer once, and the 
+         two localizations share string content. Bungie only applies this optimization 
+         in the case of all localizations in a single entry being exactly identical; 
+         in practice this only occurs for Forge labels and team name overrides (the 
+         latter of which are stored in a different string table anyway).
+      </p>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

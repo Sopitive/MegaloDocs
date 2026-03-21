@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Scripting & Triggers | MegaloEdit Documentation</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         <header><h1>Scripting & Triggers</h1></header>
+         <p>Learn how to use variables and triggers to add complex logic to your gametype.</p>
+         
+         <h2>Variables</h2>
+         <p>Variables are used to store and manipulate state. Each variable can be local, networked (periodically sent to all players), or networked_high (sent more frequently).</p>
+         <pre><code>variables global
+    local number global_number 0
+    networked timer global_timer 10
+    local team global_team defenders
+    local player global_player none
+    local object global_object none
+end
+
+variables player
+    local number is_zombie false
+end</code></pre>
+
+         <h2>Triggers</h2>
+         <p>Triggers are the core of Megalo scripts. They execute their contained code every tick if their conditions are met. Triggers are processed from top to bottom.</p>
+         <ul>
+            <li><strong>General</strong>: Runs once per tick.</li>
+            <li><strong>Player</strong>: Loops through every player per tick. The current player is referenced with <code>current_player</code>.</li>
+            <li><strong>Object</strong>: Loops through every object per tick. The current object is referenced with <code>current_object</code>.</li>
+            <li><strong>Initialization</strong>: Runs once at the beginning of the match.</li>
+            <li><strong>Object Death</strong>: Runs once every time certain objects are destroyed. Use <code>object_death_damage_type</code>, <code>object_death_dead_object</code>, <code>object_death_killing_object</code>, and <code>object_death_killing_player</code>.</li>
+         </ul>
+
+         <h2>Sub-triggers (For-each Loops)</h2>
+         <p>You can use the <code>for_each</code> action to loop through players, objects, and map objects inside any trigger.</p>
+         <pre><code>trigger general
+    temporary number player_count 0
+    action for_each player
+        action set player_count += 1
+    end
+end</code></pre>
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

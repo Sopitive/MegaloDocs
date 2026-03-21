@@ -2,88 +2,67 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      
-      <title>team.get_scoreboard_pos | RVT</title>
+      <title>team.get_scoreboard_pos | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
       <base href="../../../../" />
-      
    </head>
    <body>
-      <nav id="sidebar">
-         <ul>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="script/api/index.html">Script API reference</a></li>
-            <hr />
-            <li data-disallow-collapse>
-               <a href="script/api/team.html">Team</a>
-               <ul>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Properties</a>
-                     <ul>
-                        <li><a href="script/api/team/properties/score.html">score</a></li>
-<li><a href="script/api/team/properties/script_stat.html">script_stat[<var>n</var>]</a></li>
-
-                     </ul>
-                  </li>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Accessors</a>
-                     <ul>
-                        
-                     </ul>
-                  </li>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Member conditions</a>
-                     <ul>
-                        <li><a href="script/api/team/conditions/has_alliance_status.html">has_alliance_status</a></li>
-<li><a href="script/api/team/conditions/has_any_players.html">has_any_players</a></li>
-
-                     </ul>
-                  </li>
-                  <li data-delete-if-empty data-dont-default-collapse>
-                     <a>Member actions</a>
-                     <ul>
-                        <li><a href="script/api/team/actions/get_scoreboard_pos.html">get_scoreboard_pos</a></li>
-<li><a href="script/api/team/actions/set_co_op_spawning.html">set_co_op_spawning</a></li>
-<li><a href="script/api/team/actions/set_primary_respawn_object.html">set_primary_respawn_object</a></li>
-<li><a href="script/api/team/actions/set_respawn_vehicle.html">set_respawn_vehicle</a></li>
-<li><a href="script/api/team/actions/set_vehicle_spawning_enabled.html">set_vehicle_spawning_enabled</a></li>
-
-                     </ul>
-                  </li>
-               </ul>
-            </li>
-         </ul>
-      </nav>
-      <main>
-         <header><h1>team.get_scoreboard_pos</h1></header>
-
-               <p>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<header><h1>team.get_scoreboard_pos</h1></header>
+<p>
                   This function returns a team's position on the scoreboard. A value 
                   of 1 represents 1st place, while a value of 0 results if the function 
                   is called on <var>no_player</var>.
                </p>
-            
 <p>This function returns <a href="script/api/number.html">number</a>. Calling this function without storing its return value in a variable is an error.</p><h2>Example</h2>
-<pre>
-<span class="keyword">alias</span> leader = global.team[0]
+<pre><code>
+alias leader = global.team[0]
 
-<span class="keyword">for</span> <span class="subkeyword">each</span> <span class="subkeyword">team</span> <span class="keyword">do</span>
+for each team do
    leader = no_team
    global.number[0] = current_team.get_scoreboard_pos()
-   <span class="keyword">if</span> global.number[0] == 1 <span class="keyword">then</span>
+   if global.number[0] == 1 then
       leader = current_team
-   <span class="keyword">end</span>
-<span class="keyword">end</span></pre>
+   end
+end</code></pre>
 <h2>See also</h2>
 <ul>
-   <li><a href="script/api/player/actions/get_scoreboard_pos.html">player.get_scoreboard_pos</a></li>
-   <li><a href="script/api/player/actions/get_spree_count.html">player.get_spree_count</a></li>
-   <li><a href="script/api/player/properties/score.html">player.score</a></li>
-   <li><a href="script/api/player/properties/script_stat.html">player.script_stat</a></li>
-   <li><a href="script/api/team/properties/score.html">team.score</a></li>
+<li><a href="script/api/player/actions/get_scoreboard_pos.html">player.get_scoreboard_pos</a></li>
+<li><a href="script/api/player/actions/get_spree_count.html">player.get_spree_count</a></li>
+<li><a href="script/api/player/properties/score.html">player.score</a></li>
+<li><a href="script/api/player/properties/script_stat.html">player.script_stat</a></li>
+<li><a href="script/api/team/properties/score.html">team.score</a></li>
 </ul>
 
       </main>
-      <script src="resources/sidebar.js"></script>
-      
+      <script src="/JS/sidebar.js"></script>
    </body>
 </html>

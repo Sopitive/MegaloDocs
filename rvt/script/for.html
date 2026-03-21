@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>For-loops | Megalo Docs</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         
+<h1>For-loops</h1>
+<p>
+         A "for-each loop" allows you to execute a piece of code multiple times, with it 
+         able to access and process some object in a collection each time. Megalo offers 
+         a few types of for-each loops:
+      </p>
+<dl>
+<dt>for each object</dt>
+<dd>Process every object on the map.</dd>
+<dt>for each object with label ...</dt>
+<dd>Process every object on the map that matches a given Forge label.</dd>
+<dt>for each player</dt>
+<dd>Process every player currently participating in the match.</dd>
+<dt>for each player randomly</dt>
+<dd>Process every player in a random order.</dd>
+<dt>for each team</dt>
+<dd>Process every team defined in the gametype, as well as Neutral Team.</dd>
+</dl>
+<h2>For each object</h2>
+<p>
+         This block loops over every object on the map. You can access the object being 
+         processed using <var>current_object</var>.
+      </p>
+<h2>For each object with label</h2>
+<p>
+         This block loops over every object on the map that matches a given Forge label. 
+         The label can be specified as a string literal containing the label's name, or as 
+         an integer constant denoting the index of the Forge label in the game variant's 
+         Forge label list. You can access the object being processed using 
+         <var>current_object</var>.
+      </p>
+<h2>For each player</h2>
+<p>
+         This block loops over every player currently in the match. You can access the 
+         player being processed using <var>current_player</var>.
+      </p>
+<h2>For each player randomly</h2>
+<p>
+         This block loops over every player currently in the match, in a random order. 
+         You can access the player being processed using <var>current_player</var>.
+      </p>
+<h2>For each team</h2>
+<p>
+         This block loops over every team currently in the match. You can access the 
+         team being processed using <var>current_team</var>.
+      </p>
+
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

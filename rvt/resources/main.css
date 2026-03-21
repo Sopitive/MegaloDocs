@@ -1,0 +1,858 @@
+html {
+    --sidebar-back: #2d2d2d;
+    --sidebar-foreground: #3D3D3D;
+    --line-height: 1.215em;
+    --mainColor: #3D3D3D;
+    --textColor: white;
+    --secondMain: #333333;
+    --scrollbar: #333333;
+    --scrollbarThumb: #3D3D3D;
+    --linkColor: #00C2EE;
+    --string: #1eca00;
+    --comment: rgb(183 183 183);
+    --linkVisited: #E77BD5;
+    --aliasName: gold;
+    --functionCall: rgb(79, 160, 216);
+    --property: rgb(9 255 216);
+    --type: rgb(103, 203, 203);
+    --title: #ff5454;
+    --default: var(--aliasName);
+    --symbol: var(--functionCall);
+    --literal: var(--linkColor);
+    --keyword: #00C2EE;
+    --lighter: filter: brightness(80%);
+    /*take the firefox default for Calibri and make it explicit, so we can size/position other things relative to it*/
+}
+
+* {
+    line-height: var(--line-height)
+}
+
+
+/* core layout: */
+
+html {
+    background-color: var(--mainColor);
+    margin: 0;
+    padding: 0;
+    transition: background-color 500ms;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+img.invert {
+    filter: invert(100%);
+}
+
+nav:not([class^="afterload"]) *,
+html:not([class^="afterload"]) * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+pre {
+    margin: 0;
+}
+
+.scroll-container {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    width: 17px;
+    border: 1px solid white;
+    background-color: var(--sidebar-back);
+}
+
+.scrollbar {
+    background-color: var(--scrollbarThumb);
+    right: 0;
+    width: 15px;
+    z-index: 4;
+}
+
+.bottom-button {
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    background: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--sidebar-back);
+    z-index: 3;
+    right: 0;
+    color: var(--textColor);
+    bottom: 0;
+    border: 0;
+    font-size: 8px;
+}
+
+.top-button {
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    background: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--sidebar-back);
+    z-index: 3;
+    right: 0;
+    color: var(--textColor);
+    top: 0;
+    border: 0;
+    font-size: 8px;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--secondMain);
+    transition: background-color 500ms;
+    margin: 0 auto;
+}   
+
+body>* {
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: visible;
+}
+
+#sidebar {
+    position: fixed;
+    background-color: var(--sidebar-back);
+    width: 5%;
+    min-width: 18em;
+    padding: 60px 20px;
+    font-size: .875rem;
+    flex: 0 0 auto;
+    /* padding-top: 48px;
+    padding-bottom: 40px; */
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* transition: width 200ms, height 200ms, min-width 500ms, opacity 200ms; */
+}
+
+
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    z-index: 2;
+    background-color: var(--sidebar-back);
+    width: 100%;
+    height: 3em;
+    padding: 1em;
+    overflow: visible;
+    align-items: center;
+    justify-content: left;
+    font-weight: bold;
+}
+
+.models {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-top: 4em;
+}
+
+.models * {
+    width: 100%;
+}
+
+.reference-obj {
+    position: absolute;
+    left: 18%;
+    top: 1em;
+    z-index: 1;
+}
+
+.target-obj {
+    position: absolute;
+    left: 69%;
+    top: 0;
+    z-index: 1;
+}
+
+.dropdown-content a li {
+    color: var(--textColor);
+    border-top: 2px solid var(--sidebar-back);
+}
+
+.dropdown-content a li:hover {
+    color: var(--linkColor);
+}
+
+.dropdown-content li {
+    padding: 0;
+    transition: padding 200ms;
+}
+
+.dropdown:focus-within .dropdown-content li {
+    padding: 1em;
+}
+
+.dropdown-content {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    background-color: var(--mainColor);
+    transition: opacity 200ms, pointer-events 500ms;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    left: 0;
+    width: 100%;
+}
+
+.dropdown {
+    width: 12em;
+    color: var(--textColor);
+    background: none;
+    border: none;
+    padding: 1em;
+    position: relative;
+}
+
+.dropdown:hover {
+    background-color: var(--mainColor);
+}
+
+.dropdown:focus-within {
+    background-color: var(--secondMain);
+}
+
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    pointer-events: all;
+    min-height: 2em;
+    top: 44px;
+    border: 1px solid var(--textColor)
+}
+
+#dark-mode {
+    background: none;
+    background-color: var(--sidebar-back);
+    border: none;
+    border-radius: 50%;
+    color: var(--textColor);
+    width: 30px;
+    height: 30px;
+}
+
+
+#dark-mode:hover {
+    background-color: var(--secondMain);
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--mainColor);
+}
+
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-timeline-container,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-fullscreen-button,
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-return-to-realtime-button,
+audio::-webkit-media-controls-toggle-closed-captions-button {
+    filter: invert(100%);
+    margin: 3px 3px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: var(--mainColor);
+    filter: invert(100%);
+}
+
+.hide-color {
+    background-color: #fff !important;
+}
+
+.afterload {
+    transition: min-width 500ms, width 200ms, opacity 200ms;
+}
+
+.aliasName  {
+    color: var(--aliasName)
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+    max-height: 1000px;
+    transition: max-height 500ms;
+}
+
+#sidebar li {
+    list-style: none;
+    position: relative;
+}
+
+#sidebar li a {
+    display: block;
+    background-color: var(--sidebar-foreground);
+    padding: .25em .5em;
+    text-decoration: none;
+    border-radius: .2rem;
+    transition: background-color 500ms;
+}
+
+#sidebar li a {
+    text-overflow: ellipsis;
+    overflow-x: hidden
+}
+
+#sidebar li a {
+    margin: 4px 0
+}
+
+.collapse {
+    opacity: 0;
+    margin: 1em;
+    color: var(--textColor);
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    background-color: var(--secondMain);
+    border-radius: 25%;
+    border-color: var(--textColor);
+    /* box-shadow: -2px 5px 5px gray; */
+    position: absolute;
+    left: 19em;
+    transition: background-color 500ms, left 500ms;
+}
+
+.left {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.collapse:hover {
+    filter: brightness(85%);
+}
+
+/*spacing*/
+
+#sidebar li a.you-are-here {
+    font-weight: bold;
+    filter: brightness(120%);
+    border: 1px solid var(--textColor);
+    border-radius: 0.3rem;
+    margin-left: 1em;
+}
+
+/* #sidebar li:has(>a.you-are-here) {
+    background-color: var(--sidebar-back);
+} */
+
+#sidebar li.collapsed ul {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 500ms, opacity 200ms 300ms;
+}
+
+#sidebar li.collapsed ul li {
+    max-height: 0;
+    transition: max-height 400ms;
+    pointer-events: none;
+}
+
+#sidebar li ul li {
+    max-height: 1000px;
+}
+
+#sidebar ul li:last-child {
+    padding-bottom: 5px;
+}
+
+#sidebar>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 10em;
+    transition: max-height 1s ease-in;
+}
+
+a:not([href]),
+a[href=""] {
+    color: var(--textColor);
+}
+
+#sidebar .toggle {
+    all: unset;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    text-align: center;
+    width: 1.5ch;
+    height: var(--line-height);
+    padding: .25em 0;
+    background: #BFBFBF;
+    color: #000;
+    border-radius: .2rem 0 0 .2rem;
+    cursor: default;
+}
+
+#sidebar .toggle {
+    margin: 0;
+}
+
+
+/* Edge doesn't understand "all:unset" */
+
+#sidebar .toggle::before {
+    content: "-";
+    cursor: default
+}
+
+#sidebar li.collapsed>.toggle::before {
+    content: "+"
+}
+
+#sidebar .toggle+a {
+    border-radius: 0 .2rem .2rem 0
+}
+
+#sidebar ul hr {
+    border: 0;
+    border-top: 1px solid #BBB
+}
+
+main {
+    background-color: var(--secondMain);
+    color: var(--textColor);
+    padding: 1rem;
+    padding-top: 4em;
+    flex: 1 1 auto;
+    transition: background-color 500ms;
+    padding-left: 18em;
+    padding-right: 25px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+/* Firefox bug: #sidebar does not scroll to the bottom padding when overflow-y:auto 
+   kicks in i.e. there effectively is no bottom padding */
+
+#sidebar {
+    padding-bottom: 0;
+}
+
+
+/* remove the padding-bottom so we don't double-pad for other browsers */
+
+#sidebar::after {
+    height: .5rem;
+    content: " ";
+    display: block
+}
+
+
+
+/* this bug affects main, too */
+
+main::after {
+    height: .5rem;
+    content: " ";
+    display: block
+}
+
+main header {
+    margin-bottom: 1rem
+}
+
+main header h1 {
+    margin-bottom: 0
+}
+
+header .a-k-a,
+header .type {
+    display: block;
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: normal
+}
+
+#toc {
+    max-width: 20rem;
+    list-style: none;
+    margin: 1em 0;
+    padding: .25rem .5rem;
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    background: var(--mainColor)
+}
+
+#toc::before {
+    display: block;
+    content: "Contents";
+    font-weight: bold;
+    text-align: center
+}
+
+#toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1rem
+}
+
+#toc li {
+    margin: 0;
+    padding: .1em 0
+}
+
+#toc li+li {
+    border-top: 1px solid #E0E0E0
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1rem 0
+}
+
+
+/* manage initial/final margins: */
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+p:first-child {
+    margin-top: 0
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+    margin-bottom: 0
+}
+
+.header-permalink {
+    margin-left: 1em;
+    font-size: 1rem;
+    font-weight: normal
+}
+
+.header-permalink::before {
+    content: "🔗"
+}
+
+.header-permalink {
+    display: none
+}
+
+*:hover>.header-permalink {
+    display: inline
+}
+
+
+/* yellow fade when jumping to a header (TODO: wrap sections in <section/> so we can fade the whole section and not just the header) */
+
+@keyframes jump-to-section {
+    0% {
+        background: rgba(255, 255, 128, 0.5);
+        box-shadow: 0 0 6px 6px rgba(255, 255, 128, 0.5);
+    }
+    100% {
+        background: transparent
+    }
+}
+
+a:target {
+    animation: jump-to-section 3s ease-in 1
+}
+
+h2 {
+    border-bottom: 1px solid #DDD;
+}
+
+body {
+    font-family: Calibri, Verdana, sans-serif;
+}
+
+dt {
+    font-weight: bold
+}
+
+dd+dt {
+    margin-top: 1em;
+}
+
+main ul>li+li {
+    margin-top: .5em;
+}
+
+
+code {
+    background: var(--mainColor);
+}
+
+.close-button {
+    display: none;
+    position: fixed; 
+    top: 10%; 
+    right: 1%;
+    background-color: #a32323;
+    color: white;
+    font-weight: bold;
+    border-radius: 25%;
+    border: none;
+    width: 2em;
+    height: 2em;
+}
+
+.close-button:hover {
+    filter: brightness(150%);
+}
+
+pre:hover {
+    filter: brightness(95%);
+}
+
+.code-display {
+    opacity: 0;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    transform: translate(-50%, -50%); 
+    background-color: var(--secondMain); 
+    width: 0; 
+    height: auto;
+    max-height: 75%;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .6);
+    transition: width 300ms, height 300ms, opacity 500ms, left 200ms, top 300ms, background-color 300ms;
+}
+
+.code-display:hover {
+    filter: none;
+}
+
+.copy-button {
+    float: right;
+    background-color: var(--mainColor);
+    border-radius: 25%;
+    border: none;
+    color: var(--textColor);
+    height: 2em;
+    width: 2em;
+}
+
+.copy-button:hover {
+    filter: brightness(120%);
+}
+
+input {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: var(--mainColor);
+    color: var(--textColor);
+}
+
+pre {
+    padding: .5em;
+    background: var(--secondMain);
+    border: 1px solid #DDD;
+    overflow-x: auto;
+    margin-bottom: 3em;
+}
+
+pre code {
+    overflow-x: auto;
+    background-color: var(--secondMain);
+    color: var(--default)
+}
+
+.hljs-keyword {
+    color: var(--keyword);
+    font-weight: bold;
+}
+
+.hljs-comment {
+    color: var(--comment);
+}
+
+.hljs-string {
+    color: var(--string);
+}
+
+.hljs-type {
+    color: var(--type);
+}
+
+.hljs-property {
+    color: var(--property);
+    font-weight: bold;
+}
+
+.hljs-number {
+    color: skyblue;
+}
+
+.hljs-literal {
+    color: var(--literal);
+}
+
+.hljs-variable {
+    color: var(--aliasName);
+}
+
+.hljs-title, .hljs-built_in {
+    color: var(--title);
+}
+
+.hljs-functionCall:not(.hljs-functionCall span){
+    color: var(--functionCall);
+    font-weight: bold;
+}
+
+.hljs-functionCall span {
+    color: var(--functionCall);
+    font-weight: bold;
+}
+
+.hljs-symbol {
+    color: var(--symbol);
+    font-weight: bold;
+}
+
+.tooltip {
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    display: none;
+    opacity: 0;
+    width: 200px;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    transition: all 500ms;
+  }
+
+  .tooltip:hover {
+    position: relative;
+  }
+
+  .tooltip:hover .tooltiptext {
+    position: absolute;
+    display: block;
+    opacity: 90%;
+  }
+
+.code {
+    border: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--linkColor);
+}
+
+a:visited {
+    color: var(--linkVisited);
+}
+
+
+dt a {
+    box-shadow: inset 0 0 0 0 var(--textColor);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+dt a:hover {
+    box-shadow: inset 200px 0 0 0 var(--mainColor);
+    color: var(--textColor);
+}
+
+#sidebar a:link:hover {
+    color: #36F;
+    text-decoration: none;
+}
+
+#sidebar a:visited:hover {
+    color: #B5A;
+}
+
+.light code {
+    background: none;
+    filter: brightness(80%);
+    position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+    .collapse {
+        left: 19em;
+        top: 3em;
+        display: block;
+        opacity: 1;
+    }
+
+    .light {
+        position: relative;
+        z-index: 0;
+    }
+    
+
+    .left {
+        left: 0;
+        transition: left 300ms 600ms;
+        pointer-events: all;
+        opacity: 1;
+        transition: opacity 500ms 500ms, left 500ms;
+    }
+
+    #sidebar {
+        z-index: 0;
+    }
+
+    .hide {
+        width: 0 !important;
+        height: 0;
+        min-width: 0 !important;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 300ms;
+    }
+
+    main {
+        padding-left: 15vh;
+    }
+
+}

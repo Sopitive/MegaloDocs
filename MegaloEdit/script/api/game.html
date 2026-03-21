@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Game | MegaloEdit Script API</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         <header><h1>Game</h1></header>
+         <p>
+            The Game type (or <code>ns_game</code>) governs the global lifecycle of a match, including timers, round termination, and HUD messages.
+         </p>
+
+         <h2>Actions</h2>
+         <dl>
+            <dt>
+                end_round
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Ends the current round immediately. The game will proceed to the next round if applicable, or the post-game carnage report.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/ns_game/actions/end_round.html">game.end_round</a></p>
+            </dd>
+
+            <dt>
+                end_game
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Ends the entire match immediately, regardless of current round status.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/ns_game/actions/end_game.html">game.end_game</a></p>
+            </dd>
+
+            <dt>
+                hud_post_message
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Displays a temporary message to the specified player or team in their HUD feed.</p>
+            </dd>
+
+            <dt>
+                timer_set_rate
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Adjusts the countdown or countup speed of a global timer.</p>
+            </dd>
+         </dl>
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>

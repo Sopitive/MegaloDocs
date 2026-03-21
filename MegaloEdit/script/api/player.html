@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Player | MegaloEdit Script API</title>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="icon" href="/res/favicon.svg" sizes="any" type="image/svg+xml">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <base href="../../../" />
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <a href="/index.html" class="logo">
+                  Megalo Docs
+               </a>
+            </div>
+            <div>
+               <nav aria-label="Main menu">
+                  <ul>
+                     <li><a href="/tips/scripts.html">Scripts</a></li>
+                     <li><a href="https://discord.gg/Z2ZvPsCbcc" target="_blank">Discord</a></li>
+                     <li><a href="https://halocustoms.com/maps/categories/gametypes.40/" target="_blank">Gametypes</a></li>
+                  </ul>
+               </nav>
+               <div>
+                  <button id="theme-toggle" title="Theme" type="button"><i class="fas fa-adjust"></i></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div id="breadcrumb"></div>
+      <div id="sidebar-wrapper">
+         <div id="sidebar"></div>
+      </div>
+      <main id="main">
+         <header><h1>Player</h1></header>
+         <p>
+            The Player type refers to human or AI participants in a match. In MegaloEdit, the syntax for these actions is consistent across multiple games, though some actions are specific to certain titles.
+         </p>
+
+         <h2>Actions</h2>
+         <dl>
+            <dt>
+                set_score
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Sets the current score for the player to the specified value.</p>
+                <p><strong>Syntax:</strong> <code>player.set_score(number)</code></p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/player/properties/score.html">player.score</a></p>
+            </dd>
+
+            <dt>
+                apply_player_traits
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Displays a set of scripted traits to the specified player.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/player/actions/apply_traits.html">player.apply_traits</a></p>
+            </dd>
+
+            <dt>
+                get_button_time
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns the total number of ticks that a player has been holding an input button.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/player/actions/get-button-time.html">player.get_button_time</a></p>
+            </dd>
+
+            <dt>
+                set_fireteam
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Sets which fireteam the player belongs to (specific to Reach's multi-team mechanics).</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/player/actions/set_fireteam.html">player.set_fireteam</a></p>
+            </dd>
+
+            <dt>
+                set_loadout_palette
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Sets which loadout palette is currently available for the player to select from.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/player/actions/set_loadout_palette.html">player.set_loadout_palette</a></p>
+            </dd>
+         </dl>
+
+         <h2>Properties & Conditions</h2>
+         <dl>
+            <dt>
+                player_is_spartan
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h4">Halo 4</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns true if the player's model species currently matches a Spartan.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/player/conditions/is_spartan.html">player.is_spartan</a></p>
+            </dd>
+
+            <dt>
+                is_elite
+                <div class="badge-container">
+                    <span class="badge badge-reach">Reach</span>
+                    <span class="badge badge-h2a">H2A</span>
+                </div>
+            </dt>
+            <dd>
+                <p>Returns true if the player's model species currently matches an Elite.</p>
+                <p><strong>RVT Equivalent:</strong> <a href="/rvt/script/api/player/conditions/is_elite.html">player.is_elite</a></p>
+            </dd>
+         </dl>
+      </main>
+      <script src="/JS/sidebar.js"></script>
+   </body>
+</html>
