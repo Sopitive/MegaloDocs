@@ -59,17 +59,726 @@
           {
             "title": "Player",
             "path": "megaloedit/script/api/player.html",
-            "children": null
+            "children": [
+              {
+                "title": "Actions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "add_weapon",
+                    "path": "megaloedit/script/api/player/actions/add_weapon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "apply_traits",
+                    "path": "megaloedit/script/api/player/actions/apply_traits.html",
+                    "children": null
+                  },
+                  {
+                    "title": "force_into_vehicle",
+                    "path": "megaloedit/script/api/player/actions/force_into_vehicle.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get-button-time",
+                    "path": "megaloedit/script/api/player/actions/get-button-time.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_armor_ability",
+                    "path": "megaloedit/script/api/player/actions/get_armor_ability.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_button_press_duration",
+                    "path": "megaloedit/script/api/player/actions/get_button_press_duration.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_crosshair_target",
+                    "path": "megaloedit/script/api/player/actions/get_crosshair_target.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_fireteam",
+                    "path": "megaloedit/script/api/player/actions/get_fireteam.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_scoreboard_pos",
+                    "path": "megaloedit/script/api/player/actions/get_scoreboard_pos.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_spree_count",
+                    "path": "megaloedit/script/api/player/actions/get_spree_count.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_vehicle",
+                    "path": "megaloedit/script/api/player/actions/get_vehicle.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_weapon",
+                    "path": "megaloedit/script/api/player/actions/get_weapon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "increment_req_money_by",
+                    "path": "megaloedit/script/api/player/actions/increment_req_money_by.html",
+                    "children": null
+                  },
+                  {
+                    "title": "record_griefer_penalty",
+                    "path": "megaloedit/script/api/player/actions/record_griefer_penalty.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set-vehicle-spawning-enabled",
+                    "path": "megaloedit/script/api/player/actions/set-vehicle-spawning-enabled.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_biped",
+                    "path": "megaloedit/script/api/player/actions/set_biped.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_co_op_spawning",
+                    "path": "megaloedit/script/api/player/actions/set_co_op_spawning.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_fireteam",
+                    "path": "megaloedit/script/api/player/actions/set_fireteam.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_loadout_palette",
+                    "path": "megaloedit/script/api/player/actions/set_loadout_palette.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_objective_allegiance_icon",
+                    "path": "megaloedit/script/api/player/actions/set_objective_allegiance_icon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_objective_allegiance_name",
+                    "path": "megaloedit/script/api/player/actions/set_objective_allegiance_name.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_objective_text",
+                    "path": "megaloedit/script/api/player/actions/set_objective_text.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_primary_respawn_object",
+                    "path": "megaloedit/script/api/player/actions/set_primary_respawn_object.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_req_purchase_modes",
+                    "path": "megaloedit/script/api/player/actions/set_req_purchase_modes.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_requisition_palette",
+                    "path": "megaloedit/script/api/player/actions/set_requisition_palette.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_respawn_vehicle",
+                    "path": "megaloedit/script/api/player/actions/set_respawn_vehicle.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_round_card_icon",
+                    "path": "megaloedit/script/api/player/actions/set_round_card_icon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_round_card_text",
+                    "path": "megaloedit/script/api/player/actions/set_round_card_text.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_round_card_title",
+                    "path": "megaloedit/script/api/player/actions/set_round_card_title.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_vehicle_spawning_enabled",
+                    "path": "megaloedit/script/api/player/actions/set_vehicle_spawning_enabled.html",
+                    "children": null
+                  },
+                  {
+                    "title": "try_get_armor_ability",
+                    "path": "megaloedit/script/api/player/actions/try_get_armor_ability.html",
+                    "children": null
+                  },
+                  {
+                    "title": "try_get_death_damage_mod",
+                    "path": "megaloedit/script/api/player/actions/try_get_death_damage_mod.html",
+                    "children": null
+                  },
+                  {
+                    "title": "try_get_death_damage_type",
+                    "path": "megaloedit/script/api/player/actions/try_get_death_damage_type.html",
+                    "children": null
+                  },
+                  {
+                    "title": "try_get_killer",
+                    "path": "megaloedit/script/api/player/actions/try_get_killer.html",
+                    "children": null
+                  },
+                  {
+                    "title": "try_get_vehicle",
+                    "path": "megaloedit/script/api/player/actions/try_get_vehicle.html",
+                    "children": null
+                  },
+                  {
+                    "title": "try_get_weapon",
+                    "path": "megaloedit/script/api/player/actions/try_get_weapon.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Conditions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "assisted_kill_of",
+                    "path": "megaloedit/script/api/player/conditions/assisted_kill_of.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_elite",
+                    "path": "megaloedit/script/api/player/conditions/is_elite.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_fireteam_leader",
+                    "path": "megaloedit/script/api/player/conditions/is_fireteam_leader.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_monitor",
+                    "path": "megaloedit/script/api/player/conditions/is_monitor.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_not_respawning",
+                    "path": "megaloedit/script/api/player/conditions/is_not_respawning.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_spartan",
+                    "path": "megaloedit/script/api/player/conditions/is_spartan.html",
+                    "children": null
+                  },
+                  {
+                    "title": "killer_type_is",
+                    "path": "megaloedit/script/api/player/conditions/killer_type_is.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Properties",
+                "path": null,
+                "children": [
+                  {
+                    "title": "biped",
+                    "path": "megaloedit/script/api/player/properties/biped.html",
+                    "children": null
+                  },
+                  {
+                    "title": "money",
+                    "path": "megaloedit/script/api/player/properties/money.html",
+                    "children": null
+                  },
+                  {
+                    "title": "rating",
+                    "path": "megaloedit/script/api/player/properties/rating.html",
+                    "children": null
+                  },
+                  {
+                    "title": "score",
+                    "path": "megaloedit/script/api/player/properties/score.html",
+                    "children": null
+                  },
+                  {
+                    "title": "script_stat",
+                    "path": "megaloedit/script/api/player/properties/script_stat.html",
+                    "children": null
+                  },
+                  {
+                    "title": "team",
+                    "path": "megaloedit/script/api/player/properties/team.html",
+                    "children": null
+                  },
+                  {
+                    "title": "unknown_09",
+                    "path": "megaloedit/script/api/player/properties/unknown_09.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Accessors",
+                "path": null,
+                "children": [
+                  {
+                    "title": "frag_grenades",
+                    "path": "megaloedit/script/api/player/accessors/frag_grenades.html",
+                    "children": null
+                  },
+                  {
+                    "title": "plasma_grenades",
+                    "path": "megaloedit/script/api/player/accessors/plasma_grenades.html",
+                    "children": null
+                  }
+                ]
+              }
+            ]
           },
           {
             "title": "Object",
             "path": "megaloedit/script/api/object.html",
-            "children": null
+            "children": [
+              {
+                "title": "Actions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "add_weapon",
+                    "path": "megaloedit/script/api/object/actions/add_weapon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "animate_device_position",
+                    "path": "megaloedit/script/api/object/actions/animate_device_position.html",
+                    "children": null
+                  },
+                  {
+                    "title": "apply_shape_color_from_player_member",
+                    "path": "megaloedit/script/api/object/actions/apply_shape_color_from_player_member.html",
+                    "children": null
+                  },
+                  {
+                    "title": "attach_to",
+                    "path": "megaloedit/script/api/object/actions/attach_to.html",
+                    "children": null
+                  },
+                  {
+                    "title": "copy_rotation_from",
+                    "path": "megaloedit/script/api/object/actions/copy_rotation_from.html",
+                    "children": null
+                  },
+                  {
+                    "title": "delete",
+                    "path": "megaloedit/script/api/object/actions/delete.html",
+                    "children": null
+                  },
+                  {
+                    "title": "detach",
+                    "path": "megaloedit/script/api/object/actions/detach.html",
+                    "children": null
+                  },
+                  {
+                    "title": "enable_spawn_zone",
+                    "path": "megaloedit/script/api/object/actions/enable_spawn_zone.html",
+                    "children": null
+                  },
+                  {
+                    "title": "face_toward",
+                    "path": "megaloedit/script/api/object/actions/face_toward.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_carrier",
+                    "path": "megaloedit/script/api/object/actions/get_carrier.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_device_position",
+                    "path": "megaloedit/script/api/object/actions/get_device_position.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_device_power",
+                    "path": "megaloedit/script/api/object/actions/get_device_power.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_distance_to",
+                    "path": "megaloedit/script/api/object/actions/get_distance_to.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_orientation",
+                    "path": "megaloedit/script/api/object/actions/get_orientation.html",
+                    "children": null
+                  },
+                  {
+                    "title": "get_speed",
+                    "path": "megaloedit/script/api/object/actions/get_speed.html",
+                    "children": null
+                  },
+                  {
+                    "title": "kill",
+                    "path": "megaloedit/script/api/object/actions/kill.html",
+                    "children": null
+                  },
+                  {
+                    "title": "place_at_me",
+                    "path": "megaloedit/script/api/object/actions/place_at_me.html",
+                    "children": null
+                  },
+                  {
+                    "title": "place_between_me_and",
+                    "path": "megaloedit/script/api/object/actions/place_between_me_and.html",
+                    "children": null
+                  },
+                  {
+                    "title": "push_upward",
+                    "path": "megaloedit/script/api/object/actions/push_upward.html",
+                    "children": null
+                  },
+                  {
+                    "title": "remove_weapon",
+                    "path": "megaloedit/script/api/object/actions/remove_weapon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_device_actual_position",
+                    "path": "megaloedit/script/api/object/actions/set_device_actual_position.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_device_animation_position",
+                    "path": "megaloedit/script/api/object/actions/set_device_animation_position.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_device_position",
+                    "path": "megaloedit/script/api/object/actions/set_device_position.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_device_power",
+                    "path": "megaloedit/script/api/object/actions/set_device_power.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_garbage_collection_disabled",
+                    "path": "megaloedit/script/api/object/actions/set_garbage_collection_disabled.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_hidden",
+                    "path": "megaloedit/script/api/object/actions/set_hidden.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_invincibility",
+                    "path": "megaloedit/script/api/object/actions/set_invincibility.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_pickup_permissions",
+                    "path": "megaloedit/script/api/object/actions/set_pickup_permissions.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_progress_bar",
+                    "path": "megaloedit/script/api/object/actions/set_progress_bar.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_scale",
+                    "path": "megaloedit/script/api/object/actions/set_scale.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_shape",
+                    "path": "megaloedit/script/api/object/actions/set_shape.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_shape_visibility",
+                    "path": "megaloedit/script/api/object/actions/set_shape_visibility.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_spawn_location_fireteams",
+                    "path": "megaloedit/script/api/object/actions/set_spawn_location_fireteams.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_spawn_location_permissions",
+                    "path": "megaloedit/script/api/object/actions/set_spawn_location_permissions.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_waypoint_icon",
+                    "path": "megaloedit/script/api/object/actions/set_waypoint_icon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_waypoint_priority",
+                    "path": "megaloedit/script/api/object/actions/set_waypoint_priority.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_waypoint_range",
+                    "path": "megaloedit/script/api/object/actions/set_waypoint_range.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_waypoint_text",
+                    "path": "megaloedit/script/api/object/actions/set_waypoint_text.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_waypoint_timer",
+                    "path": "megaloedit/script/api/object/actions/set_waypoint_timer.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_waypoint_visibility",
+                    "path": "megaloedit/script/api/object/actions/set_waypoint_visibility.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_weapon_pickup_priority",
+                    "path": "megaloedit/script/api/object/actions/set_weapon_pickup_priority.html",
+                    "children": null
+                  },
+                  {
+                    "title": "try_get_carrier",
+                    "path": "megaloedit/script/api/object/actions/try_get_carrier.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Conditions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "has_forge_label",
+                    "path": "megaloedit/script/api/object/conditions/has_forge_label.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_in_use",
+                    "path": "megaloedit/script/api/object/conditions/is_in_use.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_of_type",
+                    "path": "megaloedit/script/api/object/conditions/is_of_type.html",
+                    "children": null
+                  },
+                  {
+                    "title": "is_out_of_bounds",
+                    "path": "megaloedit/script/api/object/conditions/is_out_of_bounds.html",
+                    "children": null
+                  },
+                  {
+                    "title": "shape_contains",
+                    "path": "megaloedit/script/api/object/conditions/shape_contains.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Properties",
+                "path": null,
+                "children": [
+                  {
+                    "title": "spawn_sequence",
+                    "path": "megaloedit/script/api/object/properties/spawn_sequence.html",
+                    "children": null
+                  },
+                  {
+                    "title": "team",
+                    "path": "megaloedit/script/api/object/properties/team.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Accessors",
+                "path": null,
+                "children": [
+                  {
+                    "title": "health",
+                    "path": "megaloedit/script/api/object/accessors/health.html",
+                    "children": null
+                  },
+                  {
+                    "title": "max_health",
+                    "path": "megaloedit/script/api/object/accessors/max_health.html",
+                    "children": null
+                  },
+                  {
+                    "title": "max_shields",
+                    "path": "megaloedit/script/api/object/accessors/max_shields.html",
+                    "children": null
+                  },
+                  {
+                    "title": "shields",
+                    "path": "megaloedit/script/api/object/accessors/shields.html",
+                    "children": null
+                  }
+                ]
+              }
+            ]
           },
           {
             "title": "Team",
             "path": "megaloedit/script/api/team.html",
-            "children": null
+            "children": [
+              {
+                "title": "Actions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "get_scoreboard_pos",
+                    "path": "megaloedit/script/api/team/actions/get_scoreboard_pos.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_co_op_spawning",
+                    "path": "megaloedit/script/api/team/actions/set_co_op_spawning.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_primary_respawn_object",
+                    "path": "megaloedit/script/api/team/actions/set_primary_respawn_object.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_respawn_vehicle",
+                    "path": "megaloedit/script/api/team/actions/set_respawn_vehicle.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_vehicle_spawning_enabled",
+                    "path": "megaloedit/script/api/team/actions/set_vehicle_spawning_enabled.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Conditions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "has_alliance_status",
+                    "path": "megaloedit/script/api/team/conditions/has_alliance_status.html",
+                    "children": null
+                  },
+                  {
+                    "title": "has_any_players",
+                    "path": "megaloedit/script/api/team/conditions/has_any_players.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Properties",
+                "path": null,
+                "children": [
+                  {
+                    "title": "score",
+                    "path": "megaloedit/script/api/team/properties/score.html",
+                    "children": null
+                  },
+                  {
+                    "title": "script_stat",
+                    "path": "megaloedit/script/api/team/properties/script_stat.html",
+                    "children": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Timer",
+            "path": "megaloedit/script/api/timer.html",
+            "children": [
+              {
+                "title": "Actions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "reset",
+                    "path": "megaloedit/script/api/timer/actions/reset.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_rate",
+                    "path": "megaloedit/script/api/timer/actions/set_rate.html",
+                    "children": null
+                  }
+                ]
+              },
+              {
+                "title": "Conditions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "is_zero",
+                    "path": "megaloedit/script/api/timer/conditions/is_zero.html",
+                    "children": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Widget",
+            "path": "megaloedit/script/api/widget.html",
+            "children": [
+              {
+                "title": "Actions",
+                "path": null,
+                "children": [
+                  {
+                    "title": "set_icon",
+                    "path": "megaloedit/script/api/widget/actions/set_icon.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_meter_params",
+                    "path": "megaloedit/script/api/widget/actions/set_meter_params.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_text",
+                    "path": "megaloedit/script/api/widget/actions/set_text.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_value_text",
+                    "path": "megaloedit/script/api/widget/actions/set_value_text.html",
+                    "children": null
+                  },
+                  {
+                    "title": "set_visibility",
+                    "path": "megaloedit/script/api/widget/actions/set_visibility.html",
+                    "children": null
+                  }
+                ]
+              }
+            ]
           },
           {
             "title": "Game",
@@ -77,13 +786,8 @@
             "children": null
           },
           {
-            "title": "Timer",
-            "path": "megaloedit/script/api/timer.html",
-            "children": null
-          },
-          {
-            "title": "UI Widget",
-            "path": "megaloedit/script/api/widget.html",
+            "title": "Global",
+            "path": "megaloedit/script/api/global.html",
             "children": null
           }
         ]
