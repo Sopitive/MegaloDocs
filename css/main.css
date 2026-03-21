@@ -619,3 +619,44 @@ body.actual-light .object-tag {
         padding: 40px 20px;
     }
 }
+
+/* =========================================
+   Syntax Highlighting (RVT Script Theme)
+   ========================================= */
+pre {
+    position: relative;
+}
+
+:root {
+    --hljs-string: #1eca00;
+    --hljs-comment: rgb(183, 183, 183);
+    --hljs-alias: gold;
+    --hljs-func: rgb(79, 160, 216);
+    --hljs-prop: rgb(9, 255, 216);
+    --hljs-type: rgb(103, 203, 203);
+    --hljs-title: #ff5454;
+    --hljs-literal: #00C2EE;
+    --hljs-keyword: #00C2EE;
+    --hljs-symbol: rgb(79, 160, 216);
+}
+
+.hljs-keyword { color: var(--hljs-keyword); font-weight: bold; }
+.hljs-comment { color: var(--hljs-comment); }
+.hljs-string { color: var(--hljs-string); }
+.hljs-type { color: var(--hljs-type); }
+.hljs-property { color: var(--hljs-prop); font-weight: bold; }
+.hljs-number { color: skyblue; }
+.hljs-literal { color: var(--hljs-literal); }
+.hljs-variable { color: var(--hljs-alias); }
+.hljs-title, .hljs-built_in { color: var(--hljs-title); }
+.hljs-functionCall:not(.hljs-functionCall span) { color: var(--hljs-func); font-weight: bold; }
+.hljs-functionCall span { color: var(--hljs-func); font-weight: bold; }
+.hljs-symbol { color: var(--hljs-symbol); font-weight: bold; }
+
+/* Ensure code blocks look clean */
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0;
+    color: var(--text-color);
+}
