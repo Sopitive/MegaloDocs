@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <base href="../../" />
+      
       <meta charset="UTF-8" />
       <title>Useful code snippets | Megalo Docs</title>
       <link rel="stylesheet" type="text/css" href="../../css/main.css">
@@ -68,7 +68,7 @@
 <p>
             Most official gametypes announce their names at the start of each round. They do 
             this by <dfn>sending an incident</dfn>: they use the 
-            <a href="script/api/ns_unnamed/actions/send_incident.html">send_incident</a> function 
+            <a href="../../rvt/script/api/ns_unnamed/actions/send_incident.html">send_incident</a> function 
             to tell the game that some event (such as the start of a round) has occurred. Each 
             base gametype has its own incident.
          </p>
@@ -88,10 +88,10 @@ end</code></pre>
 <p>
             In addition to announcing the game start, you may want to display explanatory 
             text at the start of the round. You can do this by calling the 
-            <a href="script/api/player/actions/set_round_card_title.html">player.set_round_card_title</a> 
+            <a href="../../rvt/script/api/player/actions/set_round_card_title.html">player.set_round_card_title</a> 
             function. Commonly, gametypes will display the score to win in the "round card," 
             unless the player has turned off the score limit, and this can be accomplished 
-            using <a href="script/api/format-string.html">format strings</a>.
+            using <a href="../../rvt/script/api/format-string.html">format strings</a>.
          </p>
 <pre><code>
 alias announced_game_start = player.number[0]
@@ -137,9 +137,9 @@ end</code></pre>
             This code was taken from official gametypes. In some cases, small adjustments 
             were made in order to avoid dependencies that you can't easily copy and paste 
             (e.g. using the
-            <a href="script/api/object/conditions/is_of_type.html">object.is_of_type</a> 
+            <a href="../../rvt/script/api/object/conditions/is_of_type.html">object.is_of_type</a> 
             condition instead of using 
-            <a href="script/api/object/conditions/has_forge_label.html">object.has_forge_label</a> 
+            <a href="../../rvt/script/api/object/conditions/has_forge_label.html">object.has_forge_label</a> 
             with unnamed Forge labels, as 343i does).
          </p>
 <pre><code>
@@ -256,7 +256,7 @@ end</code></pre>
 <section>
 <h2><a name="red-and-blue-teams">Identifying Red and Blue Teams across rounds</a></h2>
 <p>
-            As explained <a href="script/api/ns_unnamed/team.html">here</a>, Megalo scripts 
+            As explained <a href="../../rvt/script/api/ns_unnamed/team.html">here</a>, Megalo scripts 
             commonly refer to teams by a number, and with each round, Red and Blue Team swap 
             their numbers. This makes it easy to implement asymmetric gametypes: you can assume 
             that <code>team[0]</code> is always Defense and <code>team[1]</code> is always 

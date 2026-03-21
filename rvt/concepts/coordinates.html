@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <base href="../../" />
+      
       <meta charset="UTF-8" />
       <title>Bipeds and items | Megalo Docs</title>
       <link rel="stylesheet" type="text/css" href="../../css/main.css">
@@ -60,7 +60,7 @@
          There is a way to spawn an object that is completely unrotated.
       </p>
 <p>
-         If you use <a href="script/api/object/actions/place_between_me_and.html">object.place_between_me_and</a> 
+         If you use <a href="../../rvt/script/api/object/actions/place_between_me_and.html">object.place_between_me_and</a> 
          to spawn something between an object and itself, then the newly-spawned object will be 
          rotated so that its local up-vector matches the world X-axis; the object will point 
          exactly nose-down, with no rotation otherwise.
@@ -72,7 +72,7 @@
          and the game's fallback case for that is the world X-axis.)
       </p>
 <p>
-         Once you have a nose-down object, you can use <a href="script/api/object/actions/place_at_me.html">object.place_at_me</a> 
+         Once you have a nose-down object, you can use <a href="../../rvt/script/api/object/actions/place_at_me.html">object.place_at_me</a> 
          to spawn another object at it. As long as you don't use the <var>absolute_orientation</var> 
          flag, the newly-spawned object will have a perfect (0, 0, 0) rotation.
       </p>

@@ -1,13 +1,25 @@
 :root {
-    --background-color: #1b1b1b;
-    --text-color: #e0e0e0;
-    --secondary-color: #2d2d2d;
-    --accent-color: #3b82f6;
-    --hover-anim-primary: #000080;
-    --hover-anim-secondary: #05055f;
-    --border-color: rgba(255, 255, 255, 0.1);
+    --background-color: #ffffff;
+    --text-color: #1f2937;
+    --secondary-color: #f3f4f6;
+    --accent-color: #2563eb;
+    --hover-anim-primary: #e5e7eb;
+    --hover-anim-secondary: #d1d5db;
+    --border-color: rgba(0, 0, 0, 0.1);
     --sidebar-width: 320px;
     --header-height: 70px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1b1b1b;
+        --text-color: #e0e0e0;
+        --secondary-color: #2d2d2d;
+        --accent-color: #3b82f6;
+        --hover-anim-primary: #000080;
+        --hover-anim-secondary: #05055f;
+        --border-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 * {
@@ -440,7 +452,7 @@ dt:last-of-type, dd:last-of-type {
 #main li {
     margin-bottom: 10px;
 }
-body.actual-light {
+body.actual-light, body.Light {
     --background-color: #ffffff;
     --text-color: #1f2937;
     --secondary-color: #f3f4f6;
@@ -450,12 +462,22 @@ body.actual-light {
     --border-color: rgba(0, 0, 0, 0.1);
 }
 
-body.actual-light pre {
+body.Dark {
+    --background-color: #1b1b1b;
+    --text-color: #e0e0e0;
+    --secondary-color: #2d2d2d;
+    --accent-color: #3b82f6;
+    --hover-anim-primary: #000080;
+    --hover-anim-secondary: #05055f;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.Light pre, body.actual-light pre {
     background-color: #f8f9fa;
     color: #111;
 }
 
-body.actual-light h1 {
+body.Light h1, body.actual-light h1 {
     color: #1a1a1b;
     text-shadow: none;
 }

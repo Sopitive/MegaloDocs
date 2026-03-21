@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggle = document.getElementById('theme-toggle');
 
     try {
-        // 1. Theme Management
+        // Theme Management
         const savedTheme = localStorage.getItem('theme') || 'System';
         applyTheme(savedTheme);
 
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentTheme === 'Light') nextTheme = 'Dark';
             else if (currentTheme === 'Dark') nextTheme = 'System';
             else nextTheme = 'Light';
-
             applyTheme(nextTheme);
         });
 
@@ -26,46 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', theme);
         document.body.classList.remove('Light', 'Dark', 'System');
         document.body.classList.add(theme);
-        setThemeColors(theme);
         
-        toggle.classList.add('rotate');
-        setTimeout(() => toggle.classList.remove('rotate'), 600);
-    }
-
-    // Compatibility for matchMedia listener
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleThemeChange = e => {
-        if (localStorage.getItem('theme') === 'System') {
-            setThemeColors('System');
-        }
-    };
-    if (mediaQuery.addEventListener) {
-        mediaQuery.addEventListener('change', handleThemeChange);
-    } else {
-        mediaQuery.addListener(handleThemeChange);
-    }
-
-    function setThemeColors(theme) {
-        let actualTheme = theme;
-        if (theme === 'System') {
-            actualTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'Dark' : 'Light';
-        }
-
-        const colors = {
-            'Light': { bg: '#ffffff', text: '#000000', sec: '#f0f0f0', h1: '#e0e0e0', h2: '#d0d0d0' },
-            'Dark': { bg: '#1b1b1b', text: '#ffffff', sec: '#4e4e4e', h1: '#000080', h2: '#05055f' }
-        }[actualTheme];
-
-        document.documentElement.style.setProperty('--background-color', colors.bg);
-        document.documentElement.style.setProperty('--text-color', colors.text);
-        document.documentElement.style.setProperty('--secondary-color', colors.sec);
-        document.documentElement.style.setProperty('--hover-anim-primary', colors.h1);
-        document.documentElement.style.setProperty('--hover-anim-secondary', colors.h2);
-
-        document.body.classList.remove('actual-dark', 'actual-light');
-        document.body.classList.add(actualTheme === 'Dark' ? 'actual-dark' : 'actual-light');
-        document.body.style.display = "grid"; 
-
         let label = document.getElementById('theme-label');
         if (!label) {
             label = document.createElement('p');
@@ -73,7 +33,22 @@ document.addEventListener('DOMContentLoaded', function() {
             toggle.parentNode.insertBefore(label, toggle.nextSibling);
         }
         label.textContent = theme;
+        
+        toggle.classList.add('rotate');
+        setTimeout(() => toggle.classList.remove('rotate'), 600);
+        
+        // Final reveal
+        document.body.style.display = "grid";
     }
+
+    // Media query listener for when in 'System' mode
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addEventListener('change', () => {
+        if (localStorage.getItem('theme') === 'System') {
+            // CSS handles this automatically now via media query
+            // but we can force a repaint or update labels if needed
+        }
+    });
 
     // 0. Path & Root calculation (for relative path portability on GH Pages)
     const scriptSrc = document.querySelector('script[src*="sidebar.js"]').src;
@@ -100,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function renderSidebar(data) {
-        // ... search logic ...
         sidebarContainer.innerHTML = '';
         const searchContainer = document.createElement('div');
         searchContainer.className = 'sidebar-search';
@@ -113,61 +87,34 @@ document.addEventListener('DOMContentLoaded', function() {
         searchContainer.appendChild(searchInput);
         sidebarContainer.appendChild(searchContainer);
 
-        sidebarContainer.innerHTML += `<a href="${rootPath}/index.html" class="sidebar-home-link">Home</a>`;
+        const homeLink = document.createElement('a');
+        homeLink.href = rootPath + '/index.html';
+        homeLink.className = 'sidebar-home-link';
+        homeLink.textContent = 'Home';
+        sidebarContainer.appendChild(homeLink);
+
         data.forEach(category => {
             const container = document.createElement('div');
             container.className = 'sidebar-category';
             
             const head = document.createElement('div');
-            head.className = 'category-header';
+            head.className = 'category-header collapsed';
             head.textContent = category.name;
             head.addEventListener('click', (e) => {
                 const content = e.currentTarget.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-                e.currentTarget.classList.toggle('collapsed');
+                const isHidden = content.style.display === 'none';
+                content.style.display = isHidden ? 'block' : 'none';
+                e.currentTarget.classList.toggle('collapsed', !isHidden);
             });
             
             const content = document.createElement('div');
             content.className = 'category-content';
-            content.style.display = 'block'; // Expanded by default
+            content.style.display = 'none'; // Collapsed by default
             content.appendChild(buildList(category.content));
             
             container.appendChild(head);
             container.appendChild(content);
             sidebarContainer.appendChild(container);
-        });
-    }
-
-    function filterSidebar(query) {
-        const rows = sidebarContainer.querySelectorAll('.sidebar-item-row');
-        const categories = sidebarContainer.querySelectorAll('.sidebar-category');
-        
-        if (!query) {
-            // Reset visibility
-            rows.forEach(r => {
-                r.parentElement.style.display = 'block';
-                r.style.opacity = '1';
-            });
-            categories.forEach(c => c.style.display = 'block');
-            return;
-        }
-
-        categories.forEach(cat => {
-            let hasMatch = false;
-            const items = cat.querySelectorAll('li');
-            items.forEach(li => {
-                const text = li.querySelector('a').textContent.toLowerCase();
-                if (text.includes(query)) {
-                    li.style.display = 'block';
-                    hasMatch = true;
-                    // Ensure parents are visible
-                    let p = li.parentElement.closest('li');
-                    while (p) { p.style.display = 'block'; p = p.parentElement.closest('li'); }
-                } else {
-                    li.style.display = 'none';
-                }
-            });
-            cat.style.display = hasMatch ? 'block' : 'none';
         });
     }
 
@@ -186,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
             a.textContent = item.title;
             a.style.flexGrow = '1';
             if (item.path) {
-                // If the path is not absolute (starting with http), prepend rootPath
                 if (item.path.startsWith('http') || item.path.startsWith('#')) {
                     a.href = item.path;
                 } else {
@@ -211,13 +157,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     e.preventDefault();
                     toggleSubmenu(li);
                 });
-                div.appendChild(toggleBtn); // Put arrow on the right
+                div.appendChild(toggleBtn);
                 
                 li.appendChild(div);
-                const subUl = buildList(item.children); // Recursive call
-                subUl.style.display = 'block'; // Expanded by default
+                const subUl = buildList(item.children);
+                subUl.style.display = 'none'; // Collapsed by default
                 li.appendChild(subUl);
-                toggleBtn.classList.add('expanded');
             } else {
                 li.appendChild(div);
             }
@@ -240,30 +185,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function highlightActive() {
-        const path = window.location.pathname;
-        const links = sidebarContainer.querySelectorAll('a');
+        // Handle variations in how the URL might look (GH Pages subfolder, index.html omissions, etc.)
+        const currentURL = window.location.href.split('?')[0].split('#')[0];
+        
+        const links = sidebarContainer.querySelectorAll('a.has-link');
+        let activeLink = null;
+
         links.forEach(link => {
-            // Check if link matches path (handling repo subfolder)
-            if (link.href === window.location.href || link.pathname === path) {
-                link.classList.add('active');
-                let parent = link.closest('li');
-                while (parent) {
-                    const sub = parent.querySelector('ul');
-                    if (sub) {
-                        sub.style.display = 'block';
-                        const toggle = parent.querySelector('.submenu-toggle');
-                        if (toggle) toggle.classList.add('expanded');
-                    }
-                    const grandParentLi = parent.parentElement.closest('li');
-                    if (!grandParentLi) {
-                        const categoryContent = parent.closest('.category-content');
-                        if (categoryContent) categoryContent.style.display = 'block';
-                        break;
-                    }
-                    parent = grandParentLi;
-                }
+            if (link.href === currentURL) {
+                activeLink = link;
             }
         });
+
+        if (activeLink) {
+            activeLink.classList.add('active');
+            
+            // 1. Expand all parents
+            let parentLi = activeLink.closest('li');
+            while (parentLi) {
+                // Expand immediate children if it's a folder (not technically needed but better UX?)
+                // Actually, just expand all parents and their visibility
+                const parentUl = parentLi.parentElement.closest('ul');
+                if (parentUl) {
+                    parentUl.style.display = 'block';
+                    const parentRow = parentUl.parentElement.querySelector('.sidebar-item-row');
+                    if (parentRow) {
+                        const toggle = parentRow.querySelector('.submenu-toggle');
+                        if (toggle) toggle.classList.add('expanded');
+                    }
+                } else {
+                    // We are at the top-most UL within a category-content
+                    const categoryContent = parentLi.closest('.category-content');
+                    if (categoryContent) {
+                        categoryContent.style.display = 'block';
+                        const categoryHeader = categoryContent.previousElementSibling;
+                        if (categoryHeader) categoryHeader.classList.remove('collapsed');
+                    }
+                    break;
+                }
+                parentLi = parentUl.parentElement.closest('li');
+            }
+
+            // 2. Scroll into view
+            setTimeout(() => {
+                activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+        }
     }
 
     function buildBreadcrumbs(data) {
@@ -271,27 +238,44 @@ document.addEventListener('DOMContentLoaded', function() {
         const breadcrumb = document.getElementById('breadcrumb');
         if (!breadcrumb) return;
 
-        // Clean path of repo names for cleaner crumbs
-        const segments = path.split('/').filter(s => s && s.toLowerCase() !== "megalodocs");
+        // Clean path (strip repo prefix if present)
+        let cleanPath = path;
+        const repoPrefix = "/MegaloDocs";
+        if (cleanPath.startsWith(repoPrefix)) {
+            cleanPath = cleanPath.slice(repoPrefix.length);
+        }
+
+        const segments = cleanPath.split('/').filter(s => s);
         const crumbs = [{ title: 'Home', path: rootPath + '/index.html' }];
         
-        let currentRelPath = "";
-        segments.forEach(seg => {
-            currentRelPath += "/" + seg;
+        let buildingPath = "";
+        segments.forEach((seg, i) => {
+            buildingPath += "/" + seg;
+            // Last crumb might be the current page h1 title
+            let title = seg.replace(".html", "").replace(/-/g, " ");
+            title = title.charAt(0).toUpperCase() + title.slice(1);
+            
+            if (i === segments.length - 1) {
+                const mainH1 = document.querySelector('main h1');
+                if (mainH1) title = mainH1.textContent;
+            }
+            
             crumbs.push({ 
-                title: seg.charAt(0).toUpperCase() + seg.slice(1).replace(".html", ""), 
-                path: rootPath + currentRelPath 
+                title: title, 
+                path: rootPath + buildingPath 
             });
         });
 
-        breadcrumb.innerHTML = crumbs.map(c => `<a href="${c.path}">${c.title}</a>`).join(' > ');
+        breadcrumb.innerHTML = crumbs.map((c, i) => {
+            if (i === crumbs.length - 1) return `<span>${c.title}</span>`;
+            return `<a href="${c.path}">${c.title}</a>`;
+        }).join(' <i class="fas fa-chevron-right separator"></i> ');
     }
 
     function buildPageTOC() {
         const headings = document.querySelectorAll('#main h2');
         if (headings.length < 2) return;
 
-        // ... Existing TOC logic ...
         const tocWrapper = document.createElement('div');
         tocWrapper.id = 'page-toc-wrapper';
         const tocTitle = document.createElement('h3');
@@ -308,7 +292,6 @@ document.addEventListener('DOMContentLoaded', function() {
             li.appendChild(a);
             ul.appendChild(li);
 
-            // Addition: Make H2 collapsible
             h.style.cursor = 'pointer';
             h.innerHTML = `<span class="h2-toggle"></span>` + h.innerHTML;
             h.addEventListener('click', () => {
@@ -324,10 +307,45 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(tocWrapper);
     }
 
-    // Call it after some delay to ensure content is there
+    function filterSidebar(query) {
+        const categories = sidebarContainer.querySelectorAll('.sidebar-category');
+        
+        if (!query) {
+            categories.forEach(c => {
+                c.style.display = 'block';
+                // Reset internal list items if needed or leave as is if we want to keep state
+            });
+            return;
+        }
+
+        categories.forEach(cat => {
+            let hasMatch = false;
+            const items = cat.querySelectorAll('li');
+            items.forEach(li => {
+                const link = li.querySelector('a');
+                const text = link.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    li.style.display = 'block';
+                    hasMatch = true;
+                    // Expand parents if searching
+                    let p = li.parentElement.closest('ul');
+                    while (p) { p.style.display = 'block'; p = p.parentElement.closest('ul'); }
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+            cat.style.display = hasMatch ? 'block' : 'none';
+            if (hasMatch) {
+                const head = cat.querySelector('.category-header');
+                const content = cat.querySelector('.category-content');
+                if (head) head.classList.remove('collapsed');
+                if (content) content.style.display = 'block';
+            }
+        });
+    }
+
     setTimeout(buildPageTOC, 500);
 
-    // Final fallback reveal for Firefox or any other browser issues
     window.addEventListener('load', () => {
         document.body.style.display = 'grid';
     });
