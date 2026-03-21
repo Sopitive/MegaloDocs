@@ -234,14 +234,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 current = current.parentElement;
             }
 
-            // 2. Aggressive Center Scroll
-            setTimeout(() => {
-                activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 100);
-            
-            setTimeout(() => {
-                activeLink.scrollIntoView({ behavior: 'auto', block: 'center' });
-            }, 600);
+            // 2. Precise Scroll ONLY on Sidebar Container
+            const wrapper = document.getElementById('sidebar-wrapper');
+            if (wrapper) {
+                const scrollSidebar = (behavior) => {
+                    const wrapperRect = wrapper.getBoundingClientRect();
+                    const linkRect = activeLink.getBoundingClientRect();
+                    const targetScrollTop = wrapper.scrollTop + linkRect.top - wrapperRect.top - (wrapperRect.height / 2) + (linkRect.height / 2);
+                    wrapper.scrollTo({ top: targetScrollTop, behavior: behavior });
+                };
+                
+                setTimeout(() => scrollSidebar('smooth'), 100);
+                setTimeout(() => scrollSidebar('auto'), 600);
+            }
         } else {
             console.warn("Sidebar: No active link match found for:", currentURL);
         }
@@ -325,38 +330,81 @@ document.addEventListener('DOMContentLoaded', function() {
         const categories = sidebarContainer.querySelectorAll('.sidebar-category');
         
         if (!query) {
-            categories.forEach(c => {
-                c.style.display = 'block';
-                // Reset internal list items if needed or leave as is if we want to keep state
+            categories.forEach(cat => {
+                cat.style.display = 'block';
+                const items = cat.querySelectorAll('li');
+                items.forEach(li => li.style.display = 'block');
             });
+            // A full reset of expanded toggles would happen on refresh, 
+            // but we leave them as-is here so user doesn't lose complete place
             return;
         }
 
+        // Allow 'gametype' alias and support multi-word arbitrary ordering
+        const searchWords = query.toLowerCase().trim().split(/\s+/).map(w => w === 'gametype' ? 'game' : w);
+
         categories.forEach(cat => {
-            let hasMatch = false;
-            const items = cat.querySelectorAll('li');
+            const items = Array.from(cat.querySelectorAll('li'));
+            const catHead = cat.querySelector('.category-header');
+            const catName = catHead ? catHead.textContent.toLowerCase() : "";
+            
+            const matchedSet = new Set();
+
             items.forEach(li => {
-                const link = li.querySelector('a');
-                const text = link.textContent.toLowerCase();
-                if (text.includes(query)) {
+                let searchText = catName + " ";
+                let curr = li;
+                
+                // Build context string from bottom up
+                while (curr && curr !== cat) {
+                    if (curr.tagName === 'LI') {
+                        const a = curr.querySelector(':scope > .sidebar-item-row > a');
+                        if (a) searchText += a.textContent.toLowerCase() + " ";
+                    }
+                    curr = curr.parentElement;
+                }
+
+                const isMatch = searchWords.every(word => searchText.includes(word));
+                if (isMatch) {
+                    matchedSet.add(li);
+                    // Add all ancestors to matchedSet so they remain visible
+                    let pLi = li.parentElement.closest('li');
+                    while (pLi) {
+                        matchedSet.add(pLi);
+                        pLi = pLi.parentElement.closest('li');
+                    }
+                }
+            });
+
+            // Apply visibility
+            items.forEach(li => {
+                if (matchedSet.has(li)) {
                     li.style.display = 'block';
-                    hasMatch = true;
-                    // Expand parents if searching
-                    let p = li.parentElement.closest('ul');
-                    while (p) { p.style.display = 'block'; p = p.parentElement.closest('ul'); }
+                    // If it has children and a child matched, ensure the UL is visible
+                    const ul = li.querySelector(':scope > ul');
+                    if (ul) ul.style.display = 'block';
                 } else {
                     li.style.display = 'none';
                 }
             });
+
+            const hasMatch = matchedSet.size > 0;
             cat.style.display = hasMatch ? 'block' : 'none';
+            
             if (hasMatch) {
                 const head = cat.querySelector('.category-header');
                 const content = cat.querySelector('.category-content');
                 if (head) head.classList.remove('collapsed');
                 if (content) content.style.display = 'block';
+                
+                // Also visually update all toggles in matched nodes to expanded
+                matchedSet.forEach(li => {
+                    const toggle = li.querySelector(':scope > .sidebar-item-row .submenu-toggle');
+                    if (toggle) toggle.classList.add('expanded');
+                });
             }
         });
     }
+
 
     setTimeout(buildPageTOC, 500);
 
