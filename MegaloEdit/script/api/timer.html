@@ -35,59 +35,44 @@
          <div id="sidebar"></div>
       </div>
       <main id="main">
-         <header><h1>Timer</h1></header>
-         <p>
-            Timer variables are high-resolution counters used to track time intervals in a match. They can count up or down at various rates.
-         </p>
+         
+<h1>Timer</h1>
+<p>
+         Timer variables are essentially numbers that represent a high-resolution 
+         quantity of time. They can be set to count upward or downward, and the 
+         speed at which they count can be changed as well. They can have their 
+         current values set to any integer quantity of seconds by script. Timers 
+         don't have a networking priority.
+      </p>
+<p>
+         If a timer variable is set to count down, then its rate will switch to 
+         stopped when it reaches zero. If a timer variable has a non-zero initial 
+         value and it is set to count up, then its rate will switch to stopped 
+         when it reaches that initial value. If a timer variable has a zero 
+         initial value and it is set to count up, then it will count up 
+         indefinitely.
+      </p>
+<p>
+         Timer values are high-resolution. If two timers are compared to each other, 
+         then they will compare properly even if the differences in their values are 
+         less than one second.
+      </p>
+<p>
+         There are eight global timer variables, numbered from 0 to 7, which can 
+         be accessed as <code>global.timer[<var>n</var>]</code>.
+      </p>
+<h2>Member conditions</h2>
+<dl><dt><a href="./timer/conditions/is_zero.html">is_zero</a></dt>
+<dd><p>Checks whether the timer's value is zero.</p></dd>
+</dl>
+<h2>Member actions</h2>
+<dl><dt><a href="./timer/actions/reset.html">reset</a></dt>
+<dd><p>Reset a timer to its initial value.</p></dd>
+<dt><a href="./timer/actions/set_rate.html">set_rate</a></dt>
+<dd><p>Set the rate and direction in which the timer advances.</p></dd>
+</dl>
 
-         <h2>Actions</h2>
-         <dl>
-            <dt>
-                reset
-                <div class="badge-container">
-                    <span class="badge badge-reach">Reach</span>
-                    <span class="badge badge-h4">Halo 4</span>
-                    <span class="badge badge-h2a">H2A</span>
-                </div>
-            </dt>
-            <dd>
-                <p>Resets the timer to its initial value (as defined in the Forge or script settings).</p>
-                <p><strong>Syntax:</strong> <code>timer.reset()</code></p>
-                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/timer/actions/reset.html">timer.reset</a></p>
-            </dd>
-
-            <dt>
-                set_rate
-                <div class="badge-container">
-                    <span class="badge badge-reach">Reach</span>
-                    <span class="badge badge-h4">Halo 4</span>
-                    <span class="badge badge-h2a">H2A</span>
-                </div>
-            </dt>
-            <dd>
-                <p>Sets the speed at which the timer advances or recedes.</p>
-                <p><strong>Syntax:</strong> <code>timer.set_rate(rate)</code></p>
-                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/timer/actions/set_rate.html">timer.set_rate</a></p>
-            </dd>
-         </dl>
-
-         <h2>Conditions</h2>
-         <dl>
-            <dt>
-                is_zero
-                <div class="badge-container">
-                    <span class="badge badge-reach">Reach</span>
-                    <span class="badge badge-h4">Halo 4</span>
-                    <span class="badge badge-h2a">H2A</span>
-                </div>
-            </dt>
-            <dd>
-                <p>Returns true if the timer has reached zero.</p>
-                <p><strong>Syntax:</strong> <code>timer.is_zero()</code></p>
-                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/timer/conditions/is_zero.html">timer.is_zero</a></p>
-            </dd>
-         </dl>
-      </main>
+            </main>
       <script src="../../../JS/sidebar.js"></script>
    </body>
 </html>

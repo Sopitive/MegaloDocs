@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <title>UI Widget | MegaloEdit Script API</title>
+      <title>Widget | MegaloEdit Script API</title>
       <link rel="stylesheet" type="text/css" href="../../../css/main.css">
       <link rel="icon" href="../../../res/favicon.svg" sizes="any" type="image/svg+xml">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -35,56 +35,23 @@
          <div id="sidebar"></div>
       </div>
       <main id="main">
-         <header><h1>UI Widget</h1></header>
-         <p>
-            UI Widgets are scripted HUD elements used to display information to players, such as objective progress, custom scores, or informational tickers.
-         </p>
+         
+<h1>HUD Widget</h1>
+<p>A script-defined HUD widget.</p>
+<h2>Member actions</h2>
+<dl><dt><a href="./widget/actions/set_icon.html">set_icon</a></dt>
+<dd><p>Set the HUD widget's icon.</p></dd>
+<dt><a href="./widget/actions/set_meter_params.html">set_meter_params</a></dt>
+<dd><p>Set the HUD widget's meter parameters.</p></dd>
+<dt><a href="./widget/actions/set_text.html">set_text</a></dt>
+<dd><p>Set the HUD widget's text.</p></dd>
+<dt><a href="./widget/actions/set_value_text.html">set_value_text</a></dt>
+<dd><p>Set the HUD widget's value text.</p></dd>
+<dt><a href="./widget/actions/set_visibility.html">set_visibility</a></dt>
+<dd><p>Control whether a player can see this HUD widget.</p></dd>
+</dl>
 
-         <h2>Actions</h2>
-         <dl>
-            <dt>
-                set_visibility
-                <div class="badge-container">
-                    <span class="badge badge-reach">Reach</span>
-                    <span class="badge badge-h4">Halo 4</span>
-                    <span class="badge badge-h2a">H2A</span>
-                </div>
-            </dt>
-            <dd>
-                <p>Controls whether the specified HUD widget is visible to a player or team.</p>
-                <p><strong>Syntax:</strong> <code>widget.set_visibility(player_set, bool)</code></p>
-                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/widget/actions/set_visibility.html">widget.set_visibility</a></p>
-            </dd>
-
-            <dt>
-                set_text
-                <div class="badge-container">
-                    <span class="badge badge-reach">Reach</span>
-                    <span class="badge badge-h4">Halo 4</span>
-                    <span class="badge badge-h2a">H2A</span>
-                </div>
-            </dt>
-            <dd>
-                <p>Sets the text string displayed by the widget.</p>
-                <p><strong>Syntax:</strong> <code>widget.set_text(string)</code></p>
-                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/widget/actions/set_text.html">widget.set_text</a></p>
-            </dd>
-
-            <dt>
-                set_value_text
-                <div class="badge-container">
-                    <span class="badge badge-reach">Reach</span>
-                    <span class="badge badge-h4">Halo 4</span>
-                    <span class="badge badge-h2a">H2A</span>
-                </div>
-            </dt>
-            <dd>
-                <p>Updates a numeric value displayed within the widget's text template.</p>
-                <p><strong>Syntax:</strong> <code>widget.set_value_text(number)</code></p>
-                <p><strong>RVT Equivalent:</strong> <a href="../../../rvt/script/api/widget/actions/set_value_text.html">widget.set_value_text</a></p>
-            </dd>
-         </dl>
-      </main>
+            </main>
       <script src="../../../JS/sidebar.js"></script>
    </body>
 </html>
