@@ -10,6 +10,16 @@
     ]
   },
   {
+    "name": "Tools",
+    "content": [
+      {
+        "title": "Available Tools",
+        "path": "tools/index.html",
+        "children": null
+      }
+    ]
+  },
+  {
     "name": "MegaloEdit",
     "content": [
       {
@@ -227,12 +237,7 @@
     "name": "Reach Variant Tool",
     "content": [
       {
-        "title": "Tools",
-        "path": "rvt/tools.html",
-        "children": null
-      },
-      {
-        "title": "Index",
+        "title": "Getting Started",
         "path": "rvt/index.html",
         "children": null
       },
