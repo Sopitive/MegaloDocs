@@ -28,7 +28,7 @@ This documentation portal is built focused on performance and modern aesthetics:
 
 This project is made possible by the years of research and documentation provided by the following individuals in the Halo community:
 
-- **DavidJCobb**: For the foundational documentation and creation of a significant portion of the **Reach Variant Tool (RVT)** API references.
+- **DavidJCobb**: For providing the foundational documentation for a significant portion of the **Reach Variant Tool (RVT)**.
 - **TrustySn00ze**: For their extensive work documenting the **MegaloEdit** engine and language structures.
 - **Sopitive**: Project maintainer and developer of the **Universal Gametype Editor (UGE)**.
 - **The Halo Modding Community**: For the continuous testing, discovery, and development of new modding techniques.

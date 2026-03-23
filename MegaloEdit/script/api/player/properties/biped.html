@@ -53,6 +53,15 @@
             This is the only property that can be accessed on nested variables, e.g. 
             <var>current_team.player[0].biped</var>.
          </p></li>
+<li><p>
+            Waypoints specified on <code>player.biped</code> are treated as a player waypoint, and persist even if the player swaps bipeds.
+         </p></li>
+<li><p>
+            Waypoints specified on bipeds stored as a variable are treated as normal object waypoints, and can exist on top of the player waypoint.
+         </p></li>
+<li><p>
+            Waiting to spawn on another player (<code>co_op_spawning</code> enabled) will cause a red player waypoint to appear for enemies, which ignores all scripting that would otherwise hide it.
+         </p></li>
 </ul><h2>See also</h2>
 <ul>
 <li><a href="../../player/actions/set_biped.html">player.set_biped</a></li>
